@@ -4,6 +4,14 @@
              xmlns:local="clr-namespace:GADesktopUI"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <local:Bootstrapper x:Key="Bootstrapper"/>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            
+
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
