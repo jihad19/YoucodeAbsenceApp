@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GADesktopUI"
         mc:Ignorable="d"
-        Title="ShellView" Height="450" Width="800">
+        Title="ShellView" Height="1045" Width="1533" 		
+        Background="#12000000"
+		AllowsTransparency="True"
+		WindowStyle="None"
+		WindowStartupLocation="CenterScreen"
+		ResizeMode="NoResize">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="42" />
+            <ColumnDefinition Width="auto" MinWidth="244" />
+            <ColumnDefinition Width="auto" MinWidth="54" />
+            <ColumnDefinition Width="auto" MinWidth="1136" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="auto"  MinHeight="125" />
+            <RowDefinition Height="auto"  MinHeight="816" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
     </Grid>
 </Window>

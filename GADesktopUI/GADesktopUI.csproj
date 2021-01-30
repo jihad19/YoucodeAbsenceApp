@@ -142,5 +142,13 @@
     <Folder Include="Login\ViewModels\" />
     <Folder Include="Login\Views\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\langCloudAnime.png" />
+    <Resource Include="images\langCloudAnimeCp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\padlock.png" />
+    <Resource Include="images\icon\user.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
