@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Caliburn.Micro;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,16 @@ using System.Threading.Tasks;
 
 namespace GADesktopUI
 {
-    public class ShellViewModel
+    public class ShellViewModel: Conductor<Screen>.Collection.OneActive
     {
+
+
+
+        //Windows Close button
+        public void closeWindow()
+        {
+
+            this.TryClose();
+        }
     }
 }

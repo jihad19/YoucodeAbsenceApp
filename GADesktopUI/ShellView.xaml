@@ -10,7 +10,9 @@
 		AllowsTransparency="True"
 		WindowStyle="None"
 		WindowStartupLocation="CenterScreen"
-		ResizeMode="NoResize">
+		ResizeMode="NoResize"
+        Loaded="Window_Loaded"
+        >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="42" />
@@ -26,5 +28,11 @@
             <RowDefinition Height="auto"  MinHeight="816" />
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <!--Window Navs or contorllers-->
+        <StackPanel x:Name="___WindowNavs_" Orientation="Horizontal" Grid.Column="1" Grid.Row="1">
+            <Ellipse x:Name="closeWindow"  HorizontalAlignment="Left" Height="12.558"  VerticalAlignment="Top" Width="12.558" Fill="#FFFF5E57" />
+            <Ellipse x:Name="Maxwindow" HorizontalAlignment="Left" Height="12.558"  VerticalAlignment="Top" Width="12.558"  Fill="#FFFEBC2E" Margin="20,0,0,0"  />
+            <Ellipse x:Name="MinimizeWindow" HorizontalAlignment="Left" Height="12.558" VerticalAlignment="Top" Width="12.558" Fill="#FF28C73E" Margin="20,0,0,0"   />
+        </StackPanel>
     </Grid>
 </Window>
