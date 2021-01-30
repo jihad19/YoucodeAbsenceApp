@@ -55,6 +55,7 @@ namespace GADesktopUI
     {
 		[DllImport("user32.dll")]
 		internal static extern int SetWindowCompositionAttribute(IntPtr hwnd, ref WindowCompositionAttributeData data);
+
 		public ShellView()
         {
             InitializeComponent();

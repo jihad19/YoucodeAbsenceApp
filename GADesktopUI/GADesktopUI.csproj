@@ -71,6 +71,15 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Login\EventMessages\ValidLoginCredentialsEntered.cs" />
+    <Compile Include="Login\ViewModels\LoginConductorViewModel.cs" />
+    <Compile Include="Login\ViewModels\LoginCredentialsViewModel.cs" />
+    <Compile Include="Login\Views\LoginConductorView.xaml.cs">
+      <DependentUpon>LoginConductorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Views\LoginCredentialsView.xaml.cs">
+      <DependentUpon>LoginCredentialsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
     </Compile>
@@ -79,6 +88,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Login\Views\LoginConductorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login\Views\LoginCredentialsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ShellView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -138,9 +155,6 @@
     <Folder Include="Content\EventMessages\" />
     <Folder Include="Content\ViewModels\" />
     <Folder Include="Content\Views\" />
-    <Folder Include="Login\EventMessages\" />
-    <Folder Include="Login\ViewModels\" />
-    <Folder Include="Login\Views\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\langCloudAnime.png" />

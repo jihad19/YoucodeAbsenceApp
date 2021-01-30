@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GADesktopUI"
         mc:Ignorable="d"
-        Title="ShellView" Height="1045" Width="1533" 		
+        Title="ShellView" 
+        Height="1045" Width="1533"	
         Background="#12000000"
 		AllowsTransparency="True"
 		WindowStyle="None"
@@ -29,10 +30,11 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <!--Window Navs or contorllers-->
-        <StackPanel x:Name="___WindowNavs_" Orientation="Horizontal" Grid.Column="1" Grid.Row="1">
+        <StackPanel x:Name="___WindowNavs_" Orientation="Horizontal" Grid.Column="1" Grid.Row="1" Panel.ZIndex="1">
             <Ellipse x:Name="closeWindow"  HorizontalAlignment="Left" Height="12.558"  VerticalAlignment="Top" Width="12.558" Fill="#FFFF5E57" />
             <Ellipse x:Name="Maxwindow" HorizontalAlignment="Left" Height="12.558"  VerticalAlignment="Top" Width="12.558"  Fill="#FFFEBC2E" Margin="20,0,0,0"  />
             <Ellipse x:Name="MinimizeWindow" HorizontalAlignment="Left" Height="12.558" VerticalAlignment="Top" Width="12.558" Fill="#FF28C73E" Margin="20,0,0,0"   />
         </StackPanel>
+        <ContentControl x:Name="ActiveItem" Grid.ColumnSpan="5" Grid.RowSpan="5" />
     </Grid>
 </Window>

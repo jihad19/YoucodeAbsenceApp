@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using GADesktopUI.Login.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,19 +12,22 @@ namespace GADesktopUI
     public class Bootstrapper : BootstrapperBase
     {
         private SimpleContainer _container = new SimpleContainer();
+
         public Bootstrapper()
         {
             Initialize();
         }
+
+
 
         protected override void Configure()
         {
             _container.Instance(_container);
             _container
                 .Singleton<IWindowManager, WindowManager>()
-                .Singleton<IEventAggregator, EventAggregator>();
-
-
+                .Singleton<IEventAggregator, EventAggregator>()
+                .Singleton<LoginConductorViewModel>()
+                .Singleton<LoginCredentialsViewModel>();
 
             GetType().Assembly.GetTypes()
                 .Where(type => type.IsClass)
@@ -32,7 +36,7 @@ namespace GADesktopUI
                 .ForEach(viewModelType => _container.RegisterPerRequest(
                     viewModelType, viewModelType.ToString(), viewModelType));
         }
-        protected override void OnStartup(object sender, StartupEventArgs e)
+    protected override void OnStartup(object sender, StartupEventArgs e)
         {
             DisplayRootViewFor<ShellViewModel>();
         }
