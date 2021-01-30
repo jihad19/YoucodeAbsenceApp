@@ -19,7 +19,7 @@ namespace GADesktopUI.Login.ViewModels
 
         public void LoginBtn()
         {
-            _eventAggregator.PublishOnUIThread(new ValidLoginCredentialsEntered());
+            _eventAggregator.PublishOnUIThread(new AttemptLogin());
         }
     }
 }

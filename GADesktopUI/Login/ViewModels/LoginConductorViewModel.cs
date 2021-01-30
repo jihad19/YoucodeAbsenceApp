@@ -8,15 +8,21 @@ using System.Threading.Tasks;
 
 namespace GADesktopUI.Login.ViewModels
 {
-    public class LoginConductorViewModel : Conductor<Screen>.Collection.OneActive, IHandle<ValidLoginCredentialsEntered>
+    public class LoginConductorViewModel : Conductor<Screen>.Collection.OneActive, IHandle<AttemptLogin>, IHandle<ValidLoginCredentialsEntered>
     {
         private  IEventAggregator _eventAggregator;
         private  LoginCredentialsViewModel _loginCredentialsViewModel;
-        public LoginConductorViewModel(IEventAggregator eventAggregator, LoginCredentialsViewModel loginCredentialsViewModel)
+        private readonly PreloaderViewModel _preloaderViewModel;
+
+        public LoginSideBarViewModel LoginSideBar{ get; }
+
+        public LoginConductorViewModel(IEventAggregator eventAggregator, LoginCredentialsViewModel loginCredentialsViewModel, PreloaderViewModel preloaderViewModel, LoginSideBarViewModel loginSideBarViewModel)
         {
             _eventAggregator = eventAggregator;
             _loginCredentialsViewModel = loginCredentialsViewModel;
-            Items.AddRange(new Screen[] { _loginCredentialsViewModel });
+            _preloaderViewModel = preloaderViewModel;
+            LoginSideBar = loginSideBarViewModel;
+            Items.AddRange(new Screen[] { _loginCredentialsViewModel, _preloaderViewModel });
 
 
         }
@@ -36,7 +42,14 @@ namespace GADesktopUI.Login.ViewModels
 
         public void Handle(ValidLoginCredentialsEntered message)
         {
-            throw new NotImplementedException();
+
+        }
+
+        public void Handle(AttemptLogin message)
+        {
+            ActivateItem(_preloaderViewModel);
+            System.Threading.Thread.Sleep(3000);
+            _eventAggregator.PublishOnUIThread(new ValidLoginCredentialsEntered());
         }
     }
 }

@@ -71,14 +71,24 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Content\ViewModels\ContentConductorViewModelcs.cs" />
+    <Compile Include="Login\EventMessages\AttemptLogin.cs" />
     <Compile Include="Login\EventMessages\ValidLoginCredentialsEntered.cs" />
     <Compile Include="Login\ViewModels\LoginConductorViewModel.cs" />
     <Compile Include="Login\ViewModels\LoginCredentialsViewModel.cs" />
+    <Compile Include="Login\ViewModels\LoginSideBarViewModel.cs" />
+    <Compile Include="Login\ViewModels\PreloaderViewModel.cs" />
     <Compile Include="Login\Views\LoginConductorView.xaml.cs">
       <DependentUpon>LoginConductorView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Login\Views\LoginCredentialsView.xaml.cs">
       <DependentUpon>LoginCredentialsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Views\LoginSideBarView.xaml.cs">
+      <DependentUpon>LoginSideBarView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Views\PreloaderView.xaml.cs">
+      <DependentUpon>PreloaderView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
@@ -93,6 +103,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Login\Views\LoginCredentialsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login\Views\LoginSideBarView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login\Views\PreloaderView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -153,7 +171,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\EventMessages\" />
-    <Folder Include="Content\ViewModels\" />
     <Folder Include="Content\Views\" />
   </ItemGroup>
   <ItemGroup>
