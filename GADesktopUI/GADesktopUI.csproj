@@ -71,7 +71,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Content\ViewModels\ContentConductorViewModelcs.cs" />
+    <Compile Include="Content\ViewModels\ContentConductorViewModel.cs" />
+    <Compile Include="Content\Views\ContentConductorView.xaml.cs">
+      <DependentUpon>ContentConductorView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Login\EventMessages\AttemptLogin.cs" />
     <Compile Include="Login\EventMessages\ValidLoginCredentialsEntered.cs" />
     <Compile Include="Login\ViewModels\LoginConductorViewModel.cs" />
@@ -98,6 +101,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Content\Views\ContentConductorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Login\Views\LoginConductorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -171,7 +178,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\EventMessages\" />
-    <Folder Include="Content\Views\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\langCloudAnime.png" />

@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using GADesktopUI.Content.ViewModels;
 using GADesktopUI.Login.EventMessages;
 using System;
 using System.Collections.Generic;
@@ -10,18 +11,20 @@ namespace GADesktopUI.Login.ViewModels
 {
     public class LoginConductorViewModel : Conductor<Screen>.Collection.OneActive, IHandle<AttemptLogin>, IHandle<ValidLoginCredentialsEntered>
     {
-        private  IEventAggregator _eventAggregator;
-        private  LoginCredentialsViewModel _loginCredentialsViewModel;
+        private readonly IEventAggregator _eventAggregator;
+        private readonly LoginCredentialsViewModel _loginCredentialsViewModel;
         private readonly PreloaderViewModel _preloaderViewModel;
+        private readonly ContentConductorViewModel _contentConductorViewModel;
 
         public LoginSideBarViewModel LoginSideBar{ get; }
 
-        public LoginConductorViewModel(IEventAggregator eventAggregator, LoginCredentialsViewModel loginCredentialsViewModel, PreloaderViewModel preloaderViewModel, LoginSideBarViewModel loginSideBarViewModel)
+        public LoginConductorViewModel(IEventAggregator eventAggregator, LoginCredentialsViewModel loginCredentialsViewModel, PreloaderViewModel preloaderViewModel, LoginSideBarViewModel loginSideBarViewModel, ContentConductorViewModel contentConductorViewModel)
         {
             _eventAggregator = eventAggregator;
             _loginCredentialsViewModel = loginCredentialsViewModel;
             _preloaderViewModel = preloaderViewModel;
             LoginSideBar = loginSideBarViewModel;
+            _contentConductorViewModel = contentConductorViewModel;
             Items.AddRange(new Screen[] { _loginCredentialsViewModel, _preloaderViewModel });
 
 
@@ -42,14 +45,13 @@ namespace GADesktopUI.Login.ViewModels
 
         public void Handle(ValidLoginCredentialsEntered message)
         {
-
+            ActivateItem(_contentConductorViewModel);
         }
 
         public void Handle(AttemptLogin message)
         {
             ActivateItem(_preloaderViewModel);
-            System.Threading.Thread.Sleep(3000);
-            _eventAggregator.PublishOnUIThread(new ValidLoginCredentialsEntered());
+
         }
     }
 }
