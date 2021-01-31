@@ -5,9 +5,24 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:GADesktopUI.Content.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="1045" d:DesignWidth="1533">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Height="112" Margin="147,169,0,0" TextWrapping="Wrap" Text="Hello world" VerticalAlignment="Top" Width="411" Foreground="White" FontSize="72"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="auto" MinWidth="464" />
+            <ColumnDefinition Width="auto" MinWidth="117" />
+            <ColumnDefinition Width="auto" MinWidth="764" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="22" />
+            <RowDefinition Height="auto"  MinHeight="216" />
+            <RowDefinition Height="auto"  MinHeight="195" />
+            <RowDefinition Height="auto"  MinHeight="242" />
+            <RowDefinition Height="auto"  MinHeight="53" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
     </Grid>
 </UserControl>
