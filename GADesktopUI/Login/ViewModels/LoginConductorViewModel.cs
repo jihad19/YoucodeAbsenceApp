@@ -51,7 +51,7 @@ namespace GADesktopUI.Login.ViewModels
         public void Handle(AttemptLogin message)
         {
             ActivateItem(_preloaderViewModel);
-
+            _eventAggregator.PublishOnUIThread(new ValidLoginCredentialsEntered());
         }
     }
 }

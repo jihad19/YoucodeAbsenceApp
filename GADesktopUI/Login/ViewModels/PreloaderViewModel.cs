@@ -16,11 +16,7 @@ namespace GADesktopUI.Login.ViewModels
         {
             _eventAggregator = eventAggregator;
         }
-        //protected override void OnViewLoaded(object view)
-        //{
-        //    base.OnViewLoaded(view);
-        //    System.Threading.Thread.Sleep(3000);
-        //    _eventAggregator.PublishOnUIThread(new ValidLoginCredentialsEntered());
-        //}
+
+     
     }
 }

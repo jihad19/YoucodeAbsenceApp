@@ -8,7 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="1045" d:DesignWidth="1533" >
     <UserControl.Resources>
-        <Storyboard x:Key="StoryboardLoaded" RepeatBehavior="Forever">
+        <Storyboard x:Key="StoryboardLoaded" SpeedRatio="2.5" RepeatBehavior="Forever">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(RotateTransform.Angle)" Storyboard.TargetName="TransformRotate1">
                 <EasingDoubleKeyFrame KeyTime="0:0:3" Value="90">
                 </EasingDoubleKeyFrame>
