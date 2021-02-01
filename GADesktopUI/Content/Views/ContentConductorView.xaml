@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="GADesktopUI.Content.Views.ContentConductorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GADesktopUI.Content.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="1045" d:DesignWidth="1533">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="auto" MinWidth="464" />
+            <ColumnDefinition Width="auto" MinWidth="117" />
+            <ColumnDefinition Width="auto" MinWidth="764" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="22" />
+            <RowDefinition Height="auto"  MinHeight="216" />
+            <RowDefinition Height="auto"  MinHeight="195" />
+            <RowDefinition Height="auto"  MinHeight="242" />
+            <RowDefinition Height="auto"  MinHeight="53" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="379.973,150.423,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="240.357" Grid.RowSpan="2" Width="452.3" Foreground="White" FontSize="72"><Run Text="Hello world"/><LineBreak/><Run/></TextBlock>
+
+    </Grid>
+</UserControl>
