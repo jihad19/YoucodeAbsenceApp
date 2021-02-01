@@ -1,6 +1,7 @@
 ﻿using Caliburn.Micro;
 using GADesktopUI.APIHelpers;
 using GADesktopUI.Login.ViewModels;
+using GADesktopUI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,8 @@ namespace GADesktopUI
                 .Singleton<IEventAggregator, EventAggregator>()
                 .Singleton<IAPIHelper, APIHelper>()
                 .Singleton<LoginConductorViewModel>()
-                .Singleton<LoginCredentialsViewModel>();
+                .Singleton<LoginCredentialsViewModel>()
+                .Singleton<ILoggedInUserModel, LoggedInUserModel>();
 
 
             GetType().Assembly.GetTypes()

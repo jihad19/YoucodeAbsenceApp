@@ -64,6 +64,7 @@ namespace GADesktopUI.Login.ViewModels
                 _loginCredentialsViewModel.ErrorMessage = "";
                 ActivateItem(_preloaderViewModel);
                 var result = await _apiHelper.Authenticate(message.Username, message.Password);
+                var r = await _apiHelper.GetLoggedInUserInfo(result.Access_Token);
                 _eventAggregator.PublishOnUIThread(new ValidLoginCredentialsEntered());
             }
             catch (Exception ex)
