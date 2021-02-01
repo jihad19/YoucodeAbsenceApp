@@ -59,7 +59,7 @@ namespace GADesktopUI.APIHelpers
                 }
             };
         }
-        public async Task<LoggedInUserModel> GetLoggedInUserInfo(string token)
+        public async Task GetLoggedInUserInfo(string token)
         {
             _apiClient.DefaultRequestHeaders.Clear();
             _apiClient.DefaultRequestHeaders.Accept.Clear();
@@ -71,13 +71,11 @@ namespace GADesktopUI.APIHelpers
                 if (response.IsSuccessStatusCode)
                 {
                     var result = await response.Content.ReadAsAsync<LoggedInUserModel>();
-                    //LoggedInUserModel user = new LoggedInUserModel(token, result.Id, result.FirstName, result.LastName, result.EmailAddress, result.CreatedDate);
                     _loggedInUserModel.CreatedDate = result.CreatedDate;
-                    _loggedInUserModel.Id = result.Id;
+                    _loggedInUserModel.user_Id = result.user_Id;
                     _loggedInUserModel.FirstName = result.FirstName;
                     _loggedInUserModel.LastName = result.LastName;
                     _loggedInUserModel.Token = token;
-                    return result;
 
                 }
                 else

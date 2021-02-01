@@ -11,7 +11,7 @@ namespace GADesktopUI.Models
         public LoggedInUserModel(string token, string id, string firstName, string lastName, string emailAddress, DateTime createdDate)
         {
             Token = token;
-            Id = id;
+            user_Id = id;
             FirstName = firstName;
             LastName = lastName;
             EmailAddress = emailAddress;
@@ -19,7 +19,7 @@ namespace GADesktopUI.Models
         }
 
         public string Token { get; set; }
-        public string Id { get; set; }
+        public string user_Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
@@ -28,7 +28,7 @@ namespace GADesktopUI.Models
         public void ResetUserModel()
         {
             Token = "";
-            Id = "";
+            user_Id = "";
             FirstName = "";
             LastName = "";
             EmailAddress = "";

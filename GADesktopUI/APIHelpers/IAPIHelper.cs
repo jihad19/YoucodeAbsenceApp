@@ -9,6 +9,6 @@ namespace GADesktopUI.APIHelpers
         HttpClient ApiClient { get; set; }
 
         Task<AuthenticatedUser> Authenticate(string username, string password);
-        Task<LoggedInUserModel> GetLoggedInUserInfo(string token);
+        Task GetLoggedInUserInfo(string token);
     }
 }

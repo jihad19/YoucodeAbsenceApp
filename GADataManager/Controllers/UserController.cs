@@ -7,9 +7,10 @@ using System.Web.Http;
 
 namespace GADataManager.Controllers
 {
+    [Authorize]
     public class UserController : ApiController
     {
-        /*  [HttpGet]
+ /*    [HttpGet]
      public UserModel GetById()
      {
          string userId = RequestContext.Principal.Identity.GetUserId();
@@ -17,7 +18,7 @@ namespace GADataManager.Controllers
          UserData data = new UserData();
 
          return data.GetUserById(userId).First();
-     }
-*/
+     }*/
+
     }
 }
