@@ -8,9 +8,9 @@ using System.Data;
 using System.Data.SqlClient;
 using Dapper;
 
-namespace GADataManager.Library
+namespace GADataManager.Library.Internal.DataAccess
 {
-    public class SqlDataAccess
+    internal class SqlDataAccess
     {
         public string GetConnectionString(string name)
         {
@@ -39,9 +39,8 @@ namespace GADataManager.Library
                 connection.Execute(storedProcedure, parameters,
                     commandType: CommandType.StoredProcedure);
 
-               
+
             }
         }
-
     }
 }
