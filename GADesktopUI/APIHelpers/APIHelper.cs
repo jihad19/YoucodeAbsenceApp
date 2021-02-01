@@ -13,10 +13,12 @@ namespace GADesktopUI.APIHelpers
     public class APIHelper : IAPIHelper
     {
         public HttpClient _apiClient;
+        private ILoggedInUserModel _loggedInUserModel;
 
-        public APIHelper()
+        public APIHelper(ILoggedInUserModel loggedInUserModel)
         {
             InitializeClient();
+            _loggedInUserModel = loggedInUserModel;
         }
 
 
@@ -57,5 +59,33 @@ namespace GADesktopUI.APIHelpers
                 }
             };
         }
+        public async Task<LoggedInUserModel> GetLoggedInUserInfo(string token)
+        {
+            _apiClient.DefaultRequestHeaders.Clear();
+            _apiClient.DefaultRequestHeaders.Accept.Clear();
+            _apiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            _apiClient.DefaultRequestHeaders.Add("Authorization", $"Bearer { token }");
+
+            using (HttpResponseMessage response = await _apiClient.GetAsync("/api/User"))
+            {
+                if (response.IsSuccessStatusCode)
+                {
+                    var result = await response.Content.ReadAsAsync<LoggedInUserModel>();
+                    //LoggedInUserModel user = new LoggedInUserModel(token, result.Id, result.FirstName, result.LastName, result.EmailAddress, result.CreatedDate);
+                    _loggedInUserModel.CreatedDate = result.CreatedDate;
+                    _loggedInUserModel.Id = result.Id;
+                    _loggedInUserModel.FirstName = result.FirstName;
+                    _loggedInUserModel.LastName = result.LastName;
+                    _loggedInUserModel.Token = token;
+                    return result;
+
+                }
+                else
+                {
+                    throw new Exception(response.ReasonPhrase);
+                }
+            }
+        }
     }
 }
+
