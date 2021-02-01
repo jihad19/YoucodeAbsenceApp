@@ -72,8 +72,12 @@
     </ApplicationDefinition>
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Content\ViewModels\ContentConductorViewModel.cs" />
+    <Compile Include="Content\ViewModels\MenuViewModel.cs" />
     <Compile Include="Content\Views\ContentConductorView.xaml.cs">
       <DependentUpon>ContentConductorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Views\MenuView.xaml.cs">
+      <DependentUpon>MenuView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Login\EventMessages\AttemptLogin.cs" />
     <Compile Include="Login\EventMessages\ValidLoginCredentialsEntered.cs" />
@@ -102,6 +106,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Content\Views\ContentConductorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Content\Views\MenuView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

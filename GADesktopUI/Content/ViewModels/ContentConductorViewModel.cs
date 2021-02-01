@@ -11,9 +11,16 @@ namespace GADesktopUI.Content.ViewModels
     {
         private readonly IEventAggregator _eventAggregator;
 
-        public ContentConductorViewModel(IEventAggregator eventAggregator)
+        public ContentConductorViewModel
+            (
+            IEventAggregator eventAggregator,
+            MenuViewModel menuViewModel
+            )
         {
             _eventAggregator = eventAggregator;
+            MenuViewModel = menuViewModel;
         }
+
+        public MenuViewModel MenuViewModel { get; }
     }
 }
