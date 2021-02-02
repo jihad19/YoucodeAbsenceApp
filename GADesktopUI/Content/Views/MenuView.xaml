@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="GADesktopUI.Content.Views.MenuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+              xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns:local="clr-namespace:GADesktopUI.Content.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="1045" d:DesignWidth="1533" >
+    <!--MenuControl Grid-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="42" />
+            <ColumnDefinition Width="auto" MinWidth="244" />
+            <ColumnDefinition Width="auto" MinWidth="54" />
+            <ColumnDefinition Width="auto" MinWidth="1136" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="auto"  MinHeight="125" />
+            <RowDefinition Height="auto"  MinHeight="816" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--Youcode logo-->
+        <Border BorderThickness="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="1045" Grid.RowSpan="5" VerticalAlignment="Top" Width="286" Background="White"/>
+
+        <!--Youcode logo-->
+        <StackPanel x:Name="Logo" Grid.ColumnSpan="2"  Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <TextBlock HorizontalAlignment="Left" Height="68" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" FontSize="48"  FontFamily="/fonts/#Poppins" Text="You"/>
+            <TextBlock HorizontalAlignment="Left" Height="68" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" FontSize="48"  FontFamily="/fonts/#Poppins SemiBold" Foreground="#FF227EEA"><Run Text="Code."/></TextBlock>
+        </StackPanel>
+
+    </Grid>
+</UserControl>
