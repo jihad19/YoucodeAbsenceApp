@@ -58,20 +58,20 @@ namespace GADesktopUI.Login.ViewModels
        
         public async void Handle(AttemptLogin message)
         {
-            try
-            {
-                //ErrorMessage = "";
-                _loginCredentialsViewModel.ErrorMessage = "";
-                ActivateItem(_preloaderViewModel);
-                var result = await _apiHelper.Authenticate(message.Username, message.Password);
-                var r = await _apiHelper.GetLoggedInUserInfo(result.Access_Token);
-                _eventAggregator.PublishOnUIThread(new ValidLoginCredentialsEntered());
-            }
-            catch (Exception ex)
-            {
-                ActivateItem(_loginCredentialsViewModel);
-                _loginCredentialsViewModel.ErrorMessage = ex.Message;
-            }
+            _eventAggregator.PublishOnUIThread(new ValidLoginCredentialsEntered());
+            //try
+            //{
+            //    //ErrorMessage = "";
+            //    _loginCredentialsViewModel.ErrorMessage = "";
+            //    ActivateItem(_preloaderViewModel);
+            //    var result = await _apiHelper.Authenticate(message.Username, message.Password);
+            //    _eventAggregator.PublishOnUIThread(new ValidLoginCredentialsEntered());
+            //}
+            //catch (Exception ex)
+            //{
+            //    ActivateItem(_loginCredentialsViewModel);
+            //    _loginCredentialsViewModel.ErrorMessage = ex.Message;
+            //}
         }
     }
 }
