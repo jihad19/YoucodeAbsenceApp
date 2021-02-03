@@ -18,9 +18,17 @@ namespace GADesktopUI.Content.ViewModels
             )
         {
             _eventAggregator = eventAggregator;
-            MenuViewModel = menuViewModel;
+            MenuBar = menuViewModel;
         }
 
-        public MenuViewModel MenuViewModel { get; }
+        public MenuViewModel MenuBar { get; }
+
+        protected override void OnActivate()
+        {
+            base.OnActivate();
+            _eventAggregator.Subscribe(this);
+
+        }
+
     }
 }

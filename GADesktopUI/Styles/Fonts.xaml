@@ -8,6 +8,7 @@
     <FontFamily x:Key="CeraRegular">Cera pro regular, pack://GestionAbsence;,,,/fonts/#Cera pro regular</FontFamily>
     <FontFamily x:Key="PoppinsRegular">Poppins regular, pack://GestionAbsence;,,,/fonts/#Poppins regular</FontFamily>
     <FontFamily x:Key="PoppinsSemiBold">Poppins semibold, pack://GestionAbsence;,,,/fonts/#Poppins semibold</FontFamily>
+    <FontFamily x:Key="PoppinsBold">Poppins bold, pack://GestionAbsence;,,,/fonts/#Poppins bold</FontFamily>
     <FontFamily x:Key="PasswordFont">password, pack://GestionAbsence;,,,/fonts/#password</FontFamily>
 
 </ResourceDictionary>

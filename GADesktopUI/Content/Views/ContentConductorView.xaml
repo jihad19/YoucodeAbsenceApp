@@ -8,22 +8,20 @@
              d:DesignHeight="1045" d:DesignWidth="1533">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="auto" MinWidth="464" />
-            <ColumnDefinition Width="auto" MinWidth="117" />
-            <ColumnDefinition Width="auto" MinWidth="764" />
+            <ColumnDefinition Width="42" />
+            <ColumnDefinition Width="auto" MinWidth="244" />
+            <ColumnDefinition Width="auto" MinWidth="54" />
+            <ColumnDefinition Width="auto" MinWidth="1136" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20" />
-            <RowDefinition Height="22" />
-            <RowDefinition Height="auto"  MinHeight="216" />
-            <RowDefinition Height="auto"  MinHeight="195" />
-            <RowDefinition Height="auto"  MinHeight="242" />
-            <RowDefinition Height="auto"  MinHeight="53" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="auto"  MinHeight="125" />
+            <RowDefinition Height="auto"  MinHeight="816" />
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <!--<TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="379.973,150.423,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="240.357" Grid.RowSpan="2" Width="452.3" Foreground="White" FontSize="72"><Run Text="Hello world"/><LineBreak/><Run/></TextBlock>-->
-
+        <ContentControl x:Name="MenuBar" Grid.ColumnSpan="2" Grid.RowSpan="5" Width="286"   />
     </Grid>
 </UserControl>

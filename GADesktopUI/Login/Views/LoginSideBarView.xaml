@@ -146,6 +146,9 @@
         <Border BorderThickness="1" HorizontalAlignment="Left" Height="1038" Grid.RowSpan="7" VerticalAlignment="Top" Width="484" CornerRadius="30,0,0,30" Grid.ColumnSpan="2" Margin="0,3,0,0"  ClipToBounds="True" Background="#FFECEDF7"/>
         <!--Report issues card-->
         <Border x:Name="Report" BorderThickness="1" Margin="78,131,116,80" Background="White" CornerRadius="30" Grid.Column="1" Grid.Row="3" Grid.RowSpan="2">
+            <Border.Effect>
+                <DropShadowEffect Direction="311" RenderingBias="Quality" ShadowDepth="12" Color="#FF2B2828" Opacity="0.14" BlurRadius="100"/>
+            </Border.Effect>
 
             <Grid>
                 <Grid.RowDefinitions>
