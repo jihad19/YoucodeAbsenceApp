@@ -87,5 +87,10 @@ namespace GADesktopUI
 
 			Marshal.FreeHGlobal(accentPtr);
 		}
-	}
+
+        private void background_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+			this.DragMove();
+        }
+    }
 }

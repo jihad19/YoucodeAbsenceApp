@@ -23,7 +23,7 @@
             <RowDefinition Height="auto"  MinHeight="53" />
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="379.973,150.423,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="240.357" Grid.RowSpan="2" Width="452.3" Foreground="White" FontSize="72"><Run Text="Hello world"/><LineBreak/><Run/></TextBlock>
+        <!--<TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="379.973,150.423,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="240.357" Grid.RowSpan="2" Width="452.3" Foreground="White" FontSize="72"><Run Text="Hello world"/><LineBreak/><Run/></TextBlock>-->
 
     </Grid>
 </UserControl>

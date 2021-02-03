@@ -47,8 +47,15 @@
     <Reference Include="HandyControl, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\HandyControl.3.0.0\lib\net47\HandyControl.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Caliburn.Micro.3.2.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
     </Reference>
@@ -70,6 +77,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="APIHelpers\APIHelper.cs" />
+    <Compile Include="APIHelpers\IAPIHelper.cs" />
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Content\ViewModels\ContentConductorViewModel.cs" />
     <Compile Include="Content\ViewModels\MenuViewModel.cs" />
@@ -97,6 +106,9 @@
     <Compile Include="Login\Views\PreloaderView.xaml.cs">
       <DependentUpon>PreloaderView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\AuthenticatedUser.cs" />
+    <Compile Include="Models\ILoggedInUserModel.cs" />
+    <Compile Include="Models\LoggedInUserModel.cs" />
     <Compile Include="ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
     </Compile>

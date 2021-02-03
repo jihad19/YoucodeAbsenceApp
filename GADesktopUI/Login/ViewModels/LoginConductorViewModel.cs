@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using GADesktopUI.APIHelpers;
 using GADesktopUI.Content.ViewModels;
 using GADesktopUI.Login.EventMessages;
 using System;
@@ -14,7 +15,7 @@ namespace GADesktopUI.Login.ViewModels
         private readonly IEventAggregator _eventAggregator;
         private readonly LoginCredentialsViewModel _loginCredentialsViewModel;
         private readonly PreloaderViewModel _preloaderViewModel;
-        
+        private IAPIHelper _apiHelper;
 
         public LoginSideBarViewModel LoginSideBar{ get; }
 
@@ -22,14 +23,19 @@ namespace GADesktopUI.Login.ViewModels
             IEventAggregator eventAggregator, 
             LoginCredentialsViewModel loginCredentialsViewModel, 
             PreloaderViewModel preloaderViewModel, 
-            LoginSideBarViewModel loginSideBarViewModel 
+            LoginSideBarViewModel loginSideBarViewModel,
+            IAPIHelper apiHelper
+
+
             )
         {
             _eventAggregator = eventAggregator;
             _loginCredentialsViewModel = loginCredentialsViewModel;
             _preloaderViewModel = preloaderViewModel;
             LoginSideBar = loginSideBarViewModel;
-            
+            _apiHelper = apiHelper;
+
+
             Items.AddRange(new Screen[] { _loginCredentialsViewModel, _preloaderViewModel });
 
 
@@ -48,11 +54,24 @@ namespace GADesktopUI.Login.ViewModels
             _eventAggregator.Unsubscribe(this);
         }
 
+
        
-        public void Handle(AttemptLogin message)
+        public async void Handle(AttemptLogin message)
         {
-            ActivateItem(_preloaderViewModel);
             _eventAggregator.PublishOnUIThread(new ValidLoginCredentialsEntered());
+            //try
+            //{
+            //    //ErrorMessage = "";
+            //    _loginCredentialsViewModel.ErrorMessage = "";
+            //    ActivateItem(_preloaderViewModel);
+            //    var result = await _apiHelper.Authenticate(message.Username, message.Password);
+            //    _eventAggregator.PublishOnUIThread(new ValidLoginCredentialsEntered());
+            //}
+            //catch (Exception ex)
+            //{
+            //    ActivateItem(_loginCredentialsViewModel);
+            //    _loginCredentialsViewModel.ErrorMessage = ex.Message;
+            //}
         }
     }
 }
