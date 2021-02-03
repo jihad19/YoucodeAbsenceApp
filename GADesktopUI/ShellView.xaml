@@ -40,7 +40,7 @@
             <Ellipse x:Name="MinimizeWindow" HorizontalAlignment="Left" Height="12.558" VerticalAlignment="Top" Width="12.558" Fill="#FF28C73E" Margin="20,0,0,0"   />
         </StackPanel>
         <!--Window Backgrounf-->
-        <Rectangle x:Name="background" Grid.ColumnSpan="5" HorizontalAlignment="Left" Height="1038" Margin="0,3,0,0" Grid.RowSpan="7" VerticalAlignment="Top" Width="1529" RadiusX="30" RadiusY="30" Stroke="#CCFFFFFF" ClipToBounds="True" StrokeThickness="3" >
+        <Rectangle x:Name="background" Grid.ColumnSpan="5" HorizontalAlignment="Left" Height="1038" Margin="0,3,0,0" Grid.RowSpan="7" VerticalAlignment="Top" Width="1529" RadiusX="30" RadiusY="30" Stroke="#CCFFFFFF" ClipToBounds="True" StrokeThickness="3" MouseDown="background_MouseDown" >
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.97">
                     <GradientStop Color="#F4EDEEF8" Offset="0"/>
