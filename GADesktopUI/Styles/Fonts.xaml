@@ -6,7 +6,8 @@
     <FontFamily x:Key="CeraLight">Cera pro light, pack://GestionAbsence;,,,/fonts/#Cera pro light</FontFamily>
     <FontFamily x:Key="CeraMedium">Cera pro medium, pack://GestionAbsence;,,,/fonts/#Cera pro medium</FontFamily>
     <FontFamily x:Key="CeraRegular">Cera pro regular, pack://GestionAbsence;,,,/fonts/#Cera pro regular</FontFamily>
-    <FontFamily x:Key="PoppinsRegular">Cera pro regular, pack://GestionAbsence;,,,/fonts/#Poppins regular</FontFamily>
-    <FontFamily x:Key="PoppinsSemiBold">Cera pro regular, pack://GestionAbsence;,,,/fonts/#Poppins semibold</FontFamily>
+    <FontFamily x:Key="PoppinsRegular">Poppins regular, pack://GestionAbsence;,,,/fonts/#Poppins regular</FontFamily>
+    <FontFamily x:Key="PoppinsSemiBold">Poppins semibold, pack://GestionAbsence;,,,/fonts/#Poppins semibold</FontFamily>
+    <FontFamily x:Key="PasswordFont">password, pack://GestionAbsence;,,,/fonts/#password</FontFamily>
 
 </ResourceDictionary>
