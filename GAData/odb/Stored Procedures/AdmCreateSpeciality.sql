@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[CreateSpeciality]
+﻿CREATE PROCEDURE [dbo].[spCreateSpeciality]
 	@SpecialityName nvarchar(50)
 	
 AS

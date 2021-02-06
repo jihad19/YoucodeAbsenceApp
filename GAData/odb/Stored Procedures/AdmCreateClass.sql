@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[CreateClass]
+﻿CREATE PROCEDURE [dbo].[spCreateClass]
 	@Former_ID int,
 	@promo_ID int,
 	@speciality_ID int,
