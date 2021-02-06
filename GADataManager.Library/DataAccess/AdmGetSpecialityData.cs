@@ -13,7 +13,7 @@ namespace GADataManager.Library.DataAccess
         public List<AdmGetSpecialityModel> Get()
         {
             SqlDataAccess sql = new SqlDataAccess();
-            var output = sql.LoadData<AdmGetSpecialityModel, dynamic>("[spSpeciality]", new { }, "DataTest");
+            var output = sql.LoadData<AdmGetSpecialityModel, dynamic>("spSpeciality", new { }, "DataTest");
             return output;
         }
 
