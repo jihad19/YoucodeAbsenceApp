@@ -45,9 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccess\AdmGetPromoData.cs" />
     <Compile Include="DataAccess\AdmGetSpecialityData.cs" />
     <Compile Include="DataAccess\UserData.cs" />
     <Compile Include="Internal\DataAccess\SqlDataAccess.cs" />
+    <Compile Include="Models\AdmGetPromoModel.cs" />
     <Compile Include="Models\AdmGetSpecialityModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
