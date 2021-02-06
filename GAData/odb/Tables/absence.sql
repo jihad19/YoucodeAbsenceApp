@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[absence]
 (
 	[abs_ID] INT NOT NULL PRIMARY KEY IDENTITY, 
-    [abs_datetime] DATETIME NOT NULL, 
+    [abs_datetime] DATETIME NOT NULL DEFAULT getutcdate(), 
     [report] TEXT NOT NULL, 
     [Image] IMAGE NOT NULL,
     former_ID int FOREIGN KEY REFERENCES former([former_ID]) NOT NULL,
