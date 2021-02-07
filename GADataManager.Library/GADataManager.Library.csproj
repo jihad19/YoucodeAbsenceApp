@@ -48,11 +48,13 @@
     <Compile Include="DataAccess\AdmGetFormerData.cs" />
     <Compile Include="DataAccess\AdmGetPromoData.cs" />
     <Compile Include="DataAccess\AdmGetSpecialityData.cs" />
+    <Compile Include="DataAccess\AdmGetStudentByClassData.cs" />
     <Compile Include="DataAccess\UserData.cs" />
     <Compile Include="Internal\DataAccess\SqlDataAccess.cs" />
     <Compile Include="Models\AdmGetFormerModel.cs" />
     <Compile Include="Models\AdmGetPromoModel.cs" />
     <Compile Include="Models\AdmGetSpecialityModel.cs" />
+    <Compile Include="Models\AdmGetStudentByClassModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
