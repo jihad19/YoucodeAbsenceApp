@@ -14,14 +14,17 @@ namespace GADesktopUI.Content.ViewModels
         public ContentConductorViewModel
             (
             IEventAggregator eventAggregator,
-            MenuViewModel menuViewModel
+            MenuViewModel menuViewModel,
+            HeaderViewModel header
             )
         {
             _eventAggregator = eventAggregator;
             MenuBar = menuViewModel;
+            Header = header;
         }
 
         public MenuViewModel MenuBar { get; }
+        public HeaderViewModel Header { get; }
 
         protected override void OnActivate()
         {

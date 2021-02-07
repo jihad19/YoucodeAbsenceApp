@@ -86,6 +86,9 @@
     <Compile Include="Content\Views\ContentConductorView.xaml.cs">
       <DependentUpon>ContentConductorView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Content\Views\HeaderView.xaml.cs">
+      <DependentUpon>HeaderView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Content\Views\MenuView.xaml.cs">
       <DependentUpon>MenuView.xaml</DependentUpon>
     </Compile>
@@ -119,6 +122,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Content\Views\ContentConductorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Content\Views\HeaderView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -211,6 +218,12 @@
   <ItemGroup>
     <Resource Include="images\icon\padlock.png" />
     <Resource Include="images\icon\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\arrowDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\searchbtn.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

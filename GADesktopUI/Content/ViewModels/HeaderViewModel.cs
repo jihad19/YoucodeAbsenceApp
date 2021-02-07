@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GADesktopUI.Content.ViewModels
 {
-    class HeaderViewModel
+    public class HeaderViewModel
     {
     }
 }
