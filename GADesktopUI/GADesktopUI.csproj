@@ -199,6 +199,7 @@
     <Resource Include="fonts\POPPINS-SEMIBOLD.TTF" />
     <Resource Include="fonts\POPPINS-SEMIBOLDITALIC.TTF" />
     <Resource Include="fonts\POPPINS-THIN.TTF" />
+    <None Include="Design\projectGuides.guides" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -224,6 +225,23 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\icon\searchbtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\faces\2e80bb98931623.5ee79b6a8f342.jpg" />
+    <Resource Include="images\faces\arm.jpg" />
+    <Resource Include="images\faces\baa20698931623.5ee79b6a8ec2b.jpg" />
+    <Resource Include="images\faces\ff.jpg" />
+    <Resource Include="images\faces\gls.jpg" />
+    <Resource Include="images\faces\hji.jpg" />
+    <Resource Include="images\faces\kll.jpg" />
+    <Resource Include="images\faces\klop.jpg" />
+    <Resource Include="images\faces\lm.jpg" />
+    <Resource Include="images\faces\lmo.jpg" />
+    <Resource Include="images\faces\org.jpg" />
+    <Resource Include="images\faces\ty.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\bell.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

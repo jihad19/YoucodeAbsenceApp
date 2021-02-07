@@ -283,7 +283,7 @@
                 </StackPanel>
             </StackPanel>
             <!--report issue-->
-            <StackPanel x:Name="ReportIssuePanel" Margin="0,183,0,0">
+            <StackPanel x:Name="ReportIssuePanel" Margin="-13,183,0,0">
                 <!--Report issues card-->
                 <Border x:Name="Report" BorderThickness="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="White" CornerRadius="30" Padding="10,10,10,8" >
                     <Border.Effect>
