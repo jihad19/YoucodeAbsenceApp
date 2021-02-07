@@ -84,6 +84,24 @@ namespace GADesktopUI.APIHelpers
                 }
             }
         }
+        public async Task Register()
+        {
+            var data = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("Email", "tttt@Testgmail.com"),
+                new KeyValuePair<string, string>("Password", "PpPasswordd_123"),
+                new KeyValuePair<string, string>("ConfirmPassword", "PpPasswordd_123")
+                });
+            using (HttpResponseMessage response = await _apiClient.PostAsync("api/account/register", data))
+            {
+                if (!response.IsSuccessStatusCode)
+                {
+                    throw new Exception(response.ReasonPhrase);
+                }
+               
+
+            };
+        }
     }
 }
 

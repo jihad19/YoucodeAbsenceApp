@@ -25,14 +25,15 @@ namespace GADataManager.Controllers
     {
         private const string LocalLoginProvider = "Local";
         private ApplicationUserManager _userManager;
-
+        private readonly RoleManager<IdentityRole> roleManager;
         public AccountController()
         {
         }
 
         public AccountController(ApplicationUserManager userManager,
-            ISecureDataFormat<AuthenticationTicket> accessTokenFormat)
+            ISecureDataFormat<AuthenticationTicket> accessTokenFormat, RoleManager<IdentityRole> roleManager)
         {
+            this.roleManager = roleManager;
             UserManager = userManager;
             AccessTokenFormat = accessTokenFormat;
         }
@@ -329,13 +330,14 @@ namespace GADataManager.Controllers
             }
 
             var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
-
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 
             if (!result.Succeeded)
             {
+
                 return GetErrorResult(result);
             }
+           
 
             return Ok();
         }
