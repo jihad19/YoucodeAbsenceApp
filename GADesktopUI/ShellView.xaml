@@ -30,7 +30,8 @@
             <RowDefinition Height="20" />
             <RowDefinition Height="50" />
             <RowDefinition Height="auto"  MinHeight="125" />
-            <RowDefinition Height="auto"  MinHeight="816" />
+            <RowDefinition Height="auto"  MinHeight="44" />
+            <RowDefinition Height="auto"  MinHeight="772" />
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <!--Window Navs or contorllers-->
@@ -48,6 +49,6 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <ContentControl x:Name="ActiveItem" Grid.ColumnSpan="5" Grid.RowSpan="5" />
+        <ContentControl x:Name="ActiveItem" Grid.ColumnSpan="5" Grid.RowSpan="6" />
     </Grid>
 </Window>

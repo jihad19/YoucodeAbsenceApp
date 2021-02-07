@@ -18,11 +18,13 @@
             <RowDefinition Height="20" />
             <RowDefinition Height="50" />
             <RowDefinition Height="auto"  MinHeight="125" />
-            <RowDefinition Height="auto"  MinHeight="816" />
+            <RowDefinition Height="auto"  MinHeight="44" />
+            <RowDefinition Height="auto"  MinHeight="772" />
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <!--<TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="379.973,150.423,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="240.357" Grid.RowSpan="2" Width="452.3" Foreground="White" FontSize="72"><Run Text="Hello world"/><LineBreak/><Run/></TextBlock>-->
         <ContentControl x:Name="MenuBar" Grid.ColumnSpan="2" Grid.RowSpan="5" Width="286"   />
         <ContentControl x:Name="Header" Grid.Column="3" Grid.Row="1" Grid.RowSpan="2" />
+        <ContentControl x:Name="ActiveItem" Grid.Column="3" Grid.Row="4"/>
     </Grid>
 </UserControl>

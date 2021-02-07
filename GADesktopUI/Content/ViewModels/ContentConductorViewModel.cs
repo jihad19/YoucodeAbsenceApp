@@ -10,16 +10,19 @@ namespace GADesktopUI.Content.ViewModels
     public class ContentConductorViewModel : Conductor<Screen>.Collection.OneActive
     {
         private readonly IEventAggregator _eventAggregator;
+        private readonly AdminDashboardViewModel _adminDashboardViewModel;
 
         public ContentConductorViewModel
             (
             IEventAggregator eventAggregator,
             MenuViewModel menuViewModel,
+            AdminDashboardViewModel adminDashboardViewModel,
             HeaderViewModel header
             )
         {
             _eventAggregator = eventAggregator;
             MenuBar = menuViewModel;
+            _adminDashboardViewModel = adminDashboardViewModel;
             Header = header;
         }
 
@@ -30,8 +33,13 @@ namespace GADesktopUI.Content.ViewModels
         {
             base.OnActivate();
             _eventAggregator.Subscribe(this);
-
+            ActivateItem(_adminDashboardViewModel);
         }
 
+        protected override void OnDeactivate(bool close)
+        {
+            base.OnDeactivate(close);
+            _eventAggregator.Unsubscribe(this);
+        }
     }
 }

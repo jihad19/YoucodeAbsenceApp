@@ -20,9 +20,9 @@ namespace GADesktopUI.Login.ViewModels
         public LoginSideBarViewModel LoginSideBar{ get; }
 
         public LoginConductorViewModel(
-            IEventAggregator eventAggregator, 
-            LoginCredentialsViewModel loginCredentialsViewModel, 
-            PreloaderViewModel preloaderViewModel, 
+            IEventAggregator eventAggregator,
+            LoginCredentialsViewModel loginCredentialsViewModel,
+            PreloaderViewModel preloaderViewModel,
             LoginSideBarViewModel loginSideBarViewModel,
             IAPIHelper apiHelper
 
