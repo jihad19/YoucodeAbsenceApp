@@ -213,11 +213,16 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdmAddClassController.cs" />
+    <Compile Include="Controllers\AdmGetFormerController.cs" />
+    <Compile Include="Controllers\AdmGetPromoController.cs" />
+    <Compile Include="Controllers\AdmGetSpecialityController.cs" />
+    <Compile Include="Controllers\AdmGetStudentByClassController.cs" />
+    <Compile Include="Controllers\AdmGetClassesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentAbsenceSingleController.cs" />
     <Compile Include="Controllers\StudentRequestController.cs" />
     <Compile Include="Controllers\UserController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -319,6 +324,12 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GADataManager.Library\GADataManager.Library.csproj">
+      <Project>{ed10a7d0-1c4b-4e87-8bbf-4c6ef3cf9bbe}</Project>
+      <Name>GADataManager.Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
