@@ -61,11 +61,12 @@ namespace GADesktopUI.Login.ViewModels
             // _eventAggregator.PublishOnUIThread(new ValidLoginCredentialsEntered());
             try
             {
+                await _apiHelper.RegisterFormer();
                 //ErrorMessage = "";
-                _loginCredentialsViewModel.ErrorMessage = "";
-                ActivateItem(_preloaderViewModel);
-                var result = await _apiHelper.Authenticate(message.Username, message.Password);
-                _eventAggregator.PublishOnUIThread(new ValidLoginCredentialsEntered());
+                /* _loginCredentialsViewModel.ErrorMessage = "";
+                 ActivateItem(_preloaderViewModel);
+                 var result = await _apiHelper.Authenticate(message.Username, message.Password);
+                 _eventAggregator.PublishOnUIThread(new ValidLoginCredentialsEntered());*/
             }
             catch (Exception ex)
             {

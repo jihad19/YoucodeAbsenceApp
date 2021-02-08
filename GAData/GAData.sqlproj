@@ -76,5 +76,16 @@
     <Build Include="odb\Tables\secretary.sql" />
     <Build Include="odb\Tables\specialty.sql" />
     <Build Include="odb\Tables\student.sql" />
+    <Build Include="odb\Stored Procedures\AdmGetFormer.sql" />
+    <Build Include="odb\Stored Procedures\AdmGetPromo.sql" />
+    <Build Include="odb\Stored Procedures\AdmGetSpeciality.sql" />
+    <Build Include="odb\Stored Procedures\AdmGetStudentByClass.sql" />
+    <Build Include="odb\Stored Procedures\spFormerRegister.sql" />
+    <Build Include="odb\Stored Procedures\spRequest_GetLatestRequests.sql" />
+    <Build Include="odb\Stored Procedures\spSecretaryRegister.sql" />
+    <Build Include="odb\Stored Procedures\spStudentRegister.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="odb\Stored Procedures\AdmiGitClass.sql" />
   </ItemGroup>
 </Project>

@@ -331,7 +331,7 @@ namespace GADataManager.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
+            var user = new ApplicationUser() { UserName = model.UserName, Email = model.Email };
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 
@@ -341,7 +341,7 @@ namespace GADataManager.Controllers
             }
 
             await UserManager.AddToRoleAsync(user.Id, "Former");
-            AccountModel account = new AccountModel(user.Id, user.Email);
+            AccountModel account = new AccountModel(user.Id, user.Email, user.UserName);
             formerData(account);
             return Ok();
         }
@@ -360,7 +360,7 @@ namespace GADataManager.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
+            var user = new ApplicationUser() { UserName = model.UserName, Email = model.Email };
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 
@@ -370,7 +370,7 @@ namespace GADataManager.Controllers
             }
 
             await UserManager.AddToRoleAsync(user.Id, "Student");
-            AccountModel account = new AccountModel(user.Id, user.Email);
+            AccountModel account = new AccountModel(user.Id, user.Email, user.UserName);
             StudentData(account);
             return Ok();
         }
@@ -388,7 +388,7 @@ namespace GADataManager.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
+            var user = new ApplicationUser() { UserName = model.UserName, Email = model.Email };
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 
@@ -398,7 +398,7 @@ namespace GADataManager.Controllers
             }
 
             await UserManager.AddToRoleAsync(user.Id, "Secretary");
-            AccountModel account = new AccountModel(user.Id, user.Email);
+            AccountModel account = new AccountModel(user.Id, user.Email,user.UserName);
             SecretaryData(account);
             return Ok();
         }
@@ -419,7 +419,7 @@ namespace GADataManager.Controllers
             {
                 return BadRequest(ModelState);
             }
-
+            
             var info = await Authentication.GetExternalLoginInfoAsync();
             if (info == null)
             {
