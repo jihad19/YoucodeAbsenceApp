@@ -3,10 +3,51 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:hc="https://handyorg.github.io/handycontrol"
              xmlns:local="clr-namespace:GADesktopUI.Content.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="772" d:DesignWidth="1136" >
     <Grid>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" MinWidth="656"/>
+            <ColumnDefinition Width="auto" MinWidth="69"/>
+            <ColumnDefinition Width="auto" MinWidth="411"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" MinHeight="430"/>
+            <RowDefinition Height="auto" MinHeight="43"/>
+            <RowDefinition Height="auto" MinHeight="299"/>
+        </Grid.RowDefinitions>
+        
+        <Border x:Name="SudentsDash"  BorderBrush="#FF272727"  HorizontalAlignment="Left" Height="430" VerticalAlignment="Top" Width="656" Background="White" CornerRadius="30">
+            <Border.Effect>
+                <DropShadowEffect Direction="311" RenderingBias="Quality" ShadowDepth="12" Color="#FF2B2828" Opacity="0.06" BlurRadius="100"/>
+            </Border.Effect>
+        </Border>
+        <!--Dashboard right bars-->
+        <Grid Grid.Column="2" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" MinHeight="233"/>
+                <RowDefinition Height="auto" MinHeight="40"/>
+                <RowDefinition Height="auto" MinHeight="156"/>
+            </Grid.RowDefinitions>
+            <Border x:Name="RequestsDash" BorderBrush="Black"   HorizontalAlignment="Left" Height="233"  Background="White" VerticalAlignment="Top" Width="413" CornerRadius="30" >
+                <Border.Effect>
+                    <DropShadowEffect Direction="311" RenderingBias="Quality" ShadowDepth="12" Color="#FF2B2828" Opacity="0.06" BlurRadius="100"/>
+                </Border.Effect>
+            </Border>
+            <Border x:Name="ClassesDash" BorderBrush="Black" Grid.Row="2"   HorizontalAlignment="Left" Height="156"  Background="White" VerticalAlignment="Top" Width="413" CornerRadius="30" >
+                <Border.Effect>
+                    <DropShadowEffect Direction="311" RenderingBias="Quality" ShadowDepth="12" Color="#FF2B2828" Opacity="0.06" BlurRadius="100"/>
+                </Border.Effect>
+            </Border>
+
+        </Grid>
+        <!--Dashboard Teachers-->
+        <Border x:Name="TeachersDash" Grid.Row="2" BorderBrush="#FF272727" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="265" VerticalAlignment="Top" Width="1136" Background="White" CornerRadius="30">
+            <Border.Effect>
+                <DropShadowEffect Direction="311" RenderingBias="Quality" ShadowDepth="12" Color="#FF2B2828" Opacity="0.06" BlurRadius="100"/>
+            </Border.Effect>
+        </Border>
     </Grid>
 </UserControl>

@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:hc="https://handyorg.github.io/handycontrol"
              xmlns:local="clr-namespace:GADesktopUI.Content.Views"
              mc:Ignorable="d" 
              d:DesignHeight="175" d:DesignWidth="1136" >
@@ -66,6 +67,7 @@
             </Rectangle.RenderTransform>
         </Rectangle>-->
         <!--browse and search bar stackpanel-->
+        <hc:TransitioningContentControl TransitionMode="Left2RightWithFade" >
         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="0,10,0,0">
             <!--Browse Text-->
             <TextBlock Text="Browse" VerticalAlignment="Top" FontSize="20" FontFamily="{StaticResource CeraMedium}" Foreground="#FF273240" />
@@ -101,10 +103,15 @@
                 </Rectangle.Fill>
             </Rectangle>
         </StackPanel>
+        </hc:TransitioningContentControl>
         <!--user info stackpanel-->
+        <hc:TransitioningContentControl TransitionMode="Right2LeftWithFade" Grid.Column="1">
         <StackPanel Grid.Column="1" HorizontalAlignment="Right" Margin="0,10,0,0" Orientation="Horizontal" >
-
-            <Ellipse x:Name="UserPhoto" HorizontalAlignment="Left" Height="42" StrokeThickness="0" VerticalAlignment="Top" Width="42" Margin="0,-6,12,0">
+                <!--<Viewbox x:Name="flipclockViewBox" Margin="0,0,122,0" Width="188">
+                    <hc:FlipClock  />
+                </Viewbox>-->
+                
+                <Ellipse x:Name="UserPhoto" HorizontalAlignment="Left" Height="42" StrokeThickness="0" VerticalAlignment="Top" Width="42" Margin="0,-6,12,0">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="/GADesktopUI;component/images/faces/lm.jpg"/>
                 </Ellipse.Fill>
@@ -117,7 +124,9 @@
                     <ImageBrush ImageSource="/GADesktopUI;component/images/icon/arrowDown.png" Stretch="Uniform"/>
                 </Rectangle.Fill>
             </Rectangle>
-        </StackPanel>
+                
+            </StackPanel>
+        </hc:TransitioningContentControl>
         <!--Header text-->
         <StackPanel Grid.Row="1" Grid.Column="0">
             <TextBlock HorizontalAlignment="Left" Height="58" Margin="0,31,0,0" TextWrapping="Wrap" Text="Hi Med," Width="185" FontFamily="{StaticResource CeraBold}" FontSize="48" Foreground="#FF273240" />

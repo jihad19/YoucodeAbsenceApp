@@ -287,7 +287,7 @@
                 <!--Report issues card-->
                 <Border x:Name="Report" BorderThickness="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="White" CornerRadius="30" Padding="10,10,10,8" >
                     <Border.Effect>
-                        <DropShadowEffect Direction="311" RenderingBias="Quality" ShadowDepth="12" Color="#FF2B2828" Opacity="0.14" BlurRadius="100"/>
+                        <DropShadowEffect Direction="311" RenderingBias="Quality" ShadowDepth="12" Color="#FF2B2828" Opacity="0.06" BlurRadius="100"/>
                     </Border.Effect>
 
                     <Grid>

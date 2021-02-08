@@ -176,6 +176,6 @@
             <TextBlock HorizontalAlignment="Left" Height="68" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" FontSize="48"  FontFamily="/fonts/#Poppins SemiBold" Foreground="#FF227EEA"><Run Text="Code."/></TextBlock>
         </StackPanel>
         <!--charachter design colorfull-->
-        <Image Source="/images/langCloudAnimeCp.png" RenderOptions.BitmapScalingMode="HighQuality"  Height="250" VerticalAlignment="Bottom" Stretch="Fill"   Grid.Row="6" Grid.ColumnSpan="2"/>
+        <Image Source="/images/langCloudAnime.png" RenderOptions.BitmapScalingMode="HighQuality"  Height="337" VerticalAlignment="Bottom"   Grid.Row="6" Grid.ColumnSpan="2" Stretch="UniformToFill" Margin="-66,0,0,0"/>
     </Grid>
 </UserControl>
