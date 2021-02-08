@@ -84,23 +84,61 @@ namespace GADesktopUI.APIHelpers
                 }
             }
         }
-        public async Task Register()
+        public async Task RegisterSecretary()
         {
             var data = new FormUrlEncodedContent(new[]
             {
-                new KeyValuePair<string, string>("Email", "tttt@Testgmail.com"),
-                new KeyValuePair<string, string>("Password", "PpPasswordd_123"),
-                new KeyValuePair<string, string>("ConfirmPassword", "PpPasswordd_123")
+                new KeyValuePair<string, string>("Email", "Secretary2@gmail.com"),
+                new KeyValuePair<string, string>("Password", "Pwordd_123"),
+                new KeyValuePair<string, string>("ConfirmPassword", "Pwordd_123")
                 });
-            using (HttpResponseMessage response = await _apiClient.PostAsync("api/account/register", data))
+            using (HttpResponseMessage response = await _apiClient.PostAsync("api/account/registerSecretary", data))
             {
                 if (!response.IsSuccessStatusCode)
                 {
                     throw new Exception(response.ReasonPhrase);
                 }
-               
+
 
             };
+        }
+        public async Task RegisterFormer()
+        {
+            var data = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("Email", "Former2@gmail.com"),
+                new KeyValuePair<string, string>("Password", "Pwordd_123"),
+                new KeyValuePair<string, string>("ConfirmPassword", "Pwordd_123")
+                });
+            using (HttpResponseMessage response = await _apiClient.PostAsync("api/account/registerFormer", data))
+            {
+                if (!response.IsSuccessStatusCode)
+                {
+                    throw new Exception(response.ReasonPhrase);
+                }
+
+            };
+        }
+        public async Task RegisterStudent()
+        {
+            var data = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("Email", "Student2@gmail.com"),
+                new KeyValuePair<string, string>("Password", "Pwordd_123"),
+                new KeyValuePair<string, string>("ConfirmPassword", "Pwordd_123")
+                });
+            using (HttpResponseMessage response = await _apiClient.PostAsync("api/account/registerStudent", data))
+            {
+                if (!response.IsSuccessStatusCode)
+                {
+                    throw new Exception(response.ReasonPhrase);
+                }
+
+            };
+        }
+        public void LogOffUser()
+        {
+            _apiClient.DefaultRequestHeaders.Clear();
         }
     }
 }
