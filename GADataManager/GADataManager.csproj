@@ -211,6 +211,7 @@
     <Compile Include="Controllers\AdmGetPromoController.cs" />
     <Compile Include="Controllers\AdmGetSpecialityController.cs" />
     <Compile Include="Controllers\AdmGetStudentByClassController.cs" />
+    <Compile Include="Controllers\AdmGitClassController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />

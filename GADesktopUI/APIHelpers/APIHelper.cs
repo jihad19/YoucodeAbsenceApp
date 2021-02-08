@@ -102,11 +102,12 @@ namespace GADesktopUI.APIHelpers
 
             };
         }
-        public async Task RegisterFormer()
+        public async Task RegisterFormer( )
         {
             var data = new FormUrlEncodedContent(new[]
             {
-                new KeyValuePair<string, string>("Email", "Former2@gmail.com"),
+                new KeyValuePair<string, string>("Email", "Former3@gmail.com"),
+                new KeyValuePair<string, string>("UserName", "Tijani abdelatif"),
                 new KeyValuePair<string, string>("Password", "Pwordd_123"),
                 new KeyValuePair<string, string>("ConfirmPassword", "Pwordd_123")
                 });

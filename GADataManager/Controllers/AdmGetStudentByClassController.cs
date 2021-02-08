@@ -11,10 +11,10 @@ namespace GADataManager.Controllers
 {
     public class AdmGetStudentByClassController : ApiController
     {
-        public List<AdmGetStudentByClassModel> Get()
+        public List<AdmGetStudentByClassModel> Get(int ID)
         {
             AdmGetStudentByClassData data = new AdmGetStudentByClassData();
-            return data.Get();
+            return data.Get(ID);
         }
     }
 }
