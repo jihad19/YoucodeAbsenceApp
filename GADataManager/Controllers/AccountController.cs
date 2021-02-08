@@ -370,7 +370,7 @@ namespace GADataManager.Controllers
             }
 
             await UserManager.AddToRoleAsync(user.Id, "Student");
-            AccountModel account = new AccountModel(user.Id, user.Email, user.UserName, model.Class);
+            AccountModel account = new AccountModel(user.Id, user.Email, user.UserName);
             StudentData(account);
             return Ok();
         }

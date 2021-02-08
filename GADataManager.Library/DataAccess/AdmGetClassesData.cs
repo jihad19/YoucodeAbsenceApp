@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace GADataManager.Library.DataAccess
 {
-    public class AdmGetClassData
+    public class AdmGetClassesData
     {
-        public List<AdmGetClassModel> Get()
+        public List<AdmGetClassesModel> Get()
         {
             SqlDataAccess sql = new SqlDataAccess();
-            var output = sql.LoadData<AdmGetClassModel, dynamic>("spGetClass", new { }, "DataTest");
+            var output = sql.LoadData<AdmGetClassesModel, dynamic>("spGetClass", new { }, "DataTest");
             return output;
         }
     }

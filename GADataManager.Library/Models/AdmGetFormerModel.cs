@@ -10,5 +10,9 @@ namespace GADataManager.Library.Models
     {
         public int former_ID { get; set; }
         public string fullName { get; set; }
+        public string promo_year { get; set; }
+
+        public string specialty_name { get; set; }
+        
     }
 }

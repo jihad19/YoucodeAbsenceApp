@@ -9,11 +9,11 @@ using System.Web.Http;
 
 namespace GADataManager.Controllers
 {
-    public class AdmGetClassController : ApiController
+    public class AdmGetClassesController : ApiController
     {
-        public List<AdmGetClassModel> Get()
+        public List<AdmGetClassesModel> Get()
         {
-            AdmGetClassData data = new AdmGetClassData();
+            AdmGetClassesData data = new AdmGetClassesData();
             return data.Get();
         }
     }
