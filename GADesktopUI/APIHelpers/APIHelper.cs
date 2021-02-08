@@ -89,6 +89,7 @@ namespace GADesktopUI.APIHelpers
             var data = new FormUrlEncodedContent(new[]
             {
                 new KeyValuePair<string, string>("Email", "Secretary2@gmail.com"),
+                new KeyValuePair<string, string>("UserName", "name"),
                 new KeyValuePair<string, string>("Password", "Pwordd_123"),
                 new KeyValuePair<string, string>("ConfirmPassword", "Pwordd_123")
                 });
@@ -125,6 +126,7 @@ namespace GADesktopUI.APIHelpers
             var data = new FormUrlEncodedContent(new[]
             {
                 new KeyValuePair<string, string>("Email", "Student2@gmail.com"),
+                new KeyValuePair<string, string>("UserName", "mikassa abdo"),
                 new KeyValuePair<string, string>("Password", "Pwordd_123"),
                 new KeyValuePair<string, string>("ConfirmPassword", "Pwordd_123")
                 });

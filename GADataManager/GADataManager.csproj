@@ -212,10 +212,9 @@
     <Compile Include="Controllers\AdmGetPromoController.cs" />
     <Compile Include="Controllers\AdmGetSpecialityController.cs" />
     <Compile Include="Controllers\AdmGetStudentByClassController.cs" />
-    <Compile Include="Controllers\AdmGetClassController.cs" />
+    <Compile Include="Controllers\AdmGetClassesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
