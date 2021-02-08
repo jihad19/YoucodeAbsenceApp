@@ -63,19 +63,19 @@
     <Folder Include="Publish" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="odb\Stored Procedures\spStudent_GetTodayAbsence.sql" />
     <Build Include="odb\Tables\absence.sql" />
     <Build Include="odb\Tables\Admin.sql" />
-    <Build Include="odb\Tables\classe.sql" />
-    <Build Include="odb\Tables\eleve.sql" />
     <Build Include="odb\Tables\justification.sql" />
-    <Build Include="odb\Tables\Matiere.sql" />
-    <Build Include="odb\Tables\Professeur.sql" />
-    <Build Include="odb\Tables\retard.sql" />
-    <Build Include="odb\Tables\Role.sql" />
-    <Build Include="odb\Tables\secretaire.sql" />
-    <Build Include="odb\Tables\Section.sql" />
     <Build Include="odb\Tables\suAdmin.sql" />
     <Build Include="odb\Tables\User.sql" />
+    <Build Include="odb\Tables\student.sql" />
+    <Build Include="odb\Tables\specialty.sql" />
+    <Build Include="odb\Tables\secretary.sql" />
+    <Build Include="odb\Tables\promo.sql" />
+    <Build Include="odb\Tables\former.sql" />
+    <Build Include="odb\Tables\delay.sql" />
+    <Build Include="odb\Tables\class.sql" />
+    <Build Include="odb\Stored Procedures\spStudent_GetAbsenceSingle.sql" />
+    <Build Include="odb\Stored Procedures\spStudent_GetStudentRequest.sql" />
   </ItemGroup>
 </Project>
