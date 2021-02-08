@@ -84,8 +84,9 @@
     <Build Include="odb\Stored Procedures\spRequest_GetLatestRequests.sql" />
     <Build Include="odb\Stored Procedures\spSecretaryRegister.sql" />
     <Build Include="odb\Stored Procedures\spStudentRegister.sql" />
+    <Build Include="odb\Stored Procedures\spAdmAddClass.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="odb\Stored Procedures\AdmiGitClass.sql" />
+    <None Include="odb\Stored Procedures\AdmGetClass.sql" />
   </ItemGroup>
 </Project>

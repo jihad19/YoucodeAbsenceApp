@@ -45,22 +45,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccess\AdmAddClassData.cs" />
     <Compile Include="DataAccess\AdmGetFormerData.cs" />
     <Compile Include="DataAccess\AdmGetPromoData.cs" />
     <Compile Include="DataAccess\AdmGetSpecialityData.cs" />
     <Compile Include="DataAccess\AdmGetStudentByClassData.cs" />
-    <Compile Include="DataAccess\GetClassData.cs" />
+    <Compile Include="DataAccess\AdmGetClassData.cs" />
     <Compile Include="DataAccess\RegisterFormerData.cs" />
     <Compile Include="DataAccess\RegisterSecretaryData.cs" />
     <Compile Include="DataAccess\RegisterStudentData.cs" />
     <Compile Include="DataAccess\UserData.cs" />
     <Compile Include="Internal\DataAccess\SqlDataAccess.cs" />
     <Compile Include="Models\AccountModel.cs" />
+    <Compile Include="Models\AdmAddClassModel.cs" />
     <Compile Include="Models\AdmGetFormerModel.cs" />
     <Compile Include="Models\AdmGetPromoModel.cs" />
     <Compile Include="Models\AdmGetSpecialityModel.cs" />
     <Compile Include="Models\AdmGetStudentByClassModel.cs" />
-    <Compile Include="Models\GetClassModel.cs" />
+    <Compile Include="Models\AdmGetClassModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
