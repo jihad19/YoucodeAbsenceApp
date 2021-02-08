@@ -245,4 +245,32 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="report" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="7f45b1b8-a1fd-4844-a8a2-566bc3a798f3" ChangeDateTime="02/08/2021 10:53:04">
+    <Property Name="ElementName" Value="[dbo].[justification].[justification_name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[justification]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="justify" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7d5b0a7b-bfe0-4928-b46b-f4e1fd1d0f68" ChangeDateTime="02/08/2021 10:54:09">
+    <Property Name="ElementName" Value="[dbo].[reason].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[reason]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="reason_Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f7211e17-ac05-4bbc-b15d-5508fc2d43de" ChangeDateTime="02/08/2021 10:55:06">
+    <Property Name="ElementName" Value="[dbo].[justification].[justify]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[justification]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="reason_ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4d4ac1a9-b119-4fa4-aa43-c03f2968bf60" ChangeDateTime="02/08/2021 10:58:45">
+    <Property Name="ElementName" Value="[dbo].[request].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[request]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="request_Id" />
+  </Operation>
 </Operations>

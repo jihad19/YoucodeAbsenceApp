@@ -77,7 +77,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="APIHelpers\AddClassEndpoint.cs" />
     <Compile Include="APIHelpers\APIHelper.cs" />
+    <Compile Include="APIHelpers\IAddClassEndpoint.cs" />
     <Compile Include="APIHelpers\IAPIHelper.cs" />
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Content\ViewModels\ContentConductorViewModel.cs" />
@@ -106,6 +108,7 @@
     <Compile Include="Login\Views\PreloaderView.xaml.cs">
       <DependentUpon>PreloaderView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\AddClassModel.cs" />
     <Compile Include="Models\AuthenticatedUser.cs" />
     <Compile Include="Models\ILoggedInUserModel.cs" />
     <Compile Include="Models\LoggedInUserModel.cs" />
@@ -206,6 +209,12 @@
   <ItemGroup>
     <Resource Include="images\icon\padlock.png" />
     <Resource Include="images\icon\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GADataManager.Library\GADataManager.Library.csproj">
+      <Project>{ed10a7d0-1c4b-4e87-8bbf-4c6ef3cf9bbe}</Project>
+      <Name>GADataManager.Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
