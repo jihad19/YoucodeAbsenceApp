@@ -2,6 +2,7 @@
 using GADesktopUI.APIHelpers;
 using GADesktopUI.Content.ViewModels;
 using GADesktopUI.Login.EventMessages;
+using GADesktopUI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,16 +17,17 @@ namespace GADesktopUI.Login.ViewModels
         private readonly LoginCredentialsViewModel _loginCredentialsViewModel;
         private readonly PreloaderViewModel _preloaderViewModel;
         private IAPIHelper _apiHelper;
+        private IAddClassEndpoint _addClass;
 
         public LoginSideBarViewModel LoginSideBar{ get; }
 
         public LoginConductorViewModel(
-            IEventAggregator eventAggregator, 
-            LoginCredentialsViewModel loginCredentialsViewModel, 
-            PreloaderViewModel preloaderViewModel, 
+            IEventAggregator eventAggregator,
+            LoginCredentialsViewModel loginCredentialsViewModel,
+            PreloaderViewModel preloaderViewModel,
             LoginSideBarViewModel loginSideBarViewModel,
-            IAPIHelper apiHelper
-
+            IAPIHelper apiHelper,
+            IAddClassEndpoint addClass
 
             )
         {
@@ -34,6 +36,7 @@ namespace GADesktopUI.Login.ViewModels
             _preloaderViewModel = preloaderViewModel;
             LoginSideBar = loginSideBarViewModel;
             _apiHelper = apiHelper;
+            _addClass = addClass;
 
 
             Items.AddRange(new Screen[] { _loginCredentialsViewModel, _preloaderViewModel });
@@ -56,22 +59,25 @@ namespace GADesktopUI.Login.ViewModels
 
 
        
-        public async void Handle(AttemptLogin message)
+        public async  void Handle(AttemptLogin message)
         {
-            _eventAggregator.PublishOnUIThread(new ValidLoginCredentialsEntered());
-            //try
-            //{
-            //    //ErrorMessage = "";
-            //    _loginCredentialsViewModel.ErrorMessage = "";
-            //    ActivateItem(_preloaderViewModel);
-            //    var result = await _apiHelper.Authenticate(message.Username, message.Password);
-            //    _eventAggregator.PublishOnUIThread(new ValidLoginCredentialsEntered());
-            //}
-            //catch (Exception ex)
-            //{
-            //    ActivateItem(_loginCredentialsViewModel);
-            //    _loginCredentialsViewModel.ErrorMessage = ex.Message;
-            //}
+            // _eventAggregator.PublishOnUIThread(new ValidLoginCredentialsEntered());
+            try
+            {
+
+
+                await _apiHelper.RegisterSecretary();
+                //ErrorMessage = "";
+                /* _loginCredentialsViewModel.ErrorMessage = "";
+                 ActivateItem(_preloaderViewModel);
+                 var result = await _apiHelper.Authenticate(message.Username, message.Password);
+                 _eventAggregator.PublishOnUIThread(new ValidLoginCredentialsEntered());*/
+            }
+            catch (Exception ex)
+            {
+                ActivateItem(_loginCredentialsViewModel);
+                _loginCredentialsViewModel.ErrorMessage = ex.Message;
+            }
         }
     }
 }
