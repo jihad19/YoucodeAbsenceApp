@@ -121,14 +121,15 @@ namespace GADesktopUI.APIHelpers
 
             };
         }
-        public async Task RegisterStudent(string email,string username,string password,string ConfirmPassword)
+        public async Task RegisterStudent(string email,string username,string password,string ConfirmPassword,string class_id)
         {
             var data = new FormUrlEncodedContent(new[]
             {
                 new KeyValuePair<string, string>("Email", email),
                 new KeyValuePair<string, string>("UserName", username),
+                new KeyValuePair<string, string>("class", class_id),
                 new KeyValuePair<string, string>("Password", password),
-                new KeyValuePair<string, string>("ConfirmPassword", "ConfirmPassword")
+                new KeyValuePair<string, string>("ConfirmPassword", ConfirmPassword)
                 });
             using (HttpResponseMessage response = await _apiClient.PostAsync("api/account/registerStudent", data))
             {

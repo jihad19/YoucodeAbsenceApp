@@ -66,7 +66,7 @@ namespace GADesktopUI.Login.ViewModels
             {
 
 
-                await _apiHelper.RegisterSecretary();
+                await _apiHelper.RegisterStudent("TestStudentClass@gmail","Class class","Pwd_123", "Pwd_123","1");
                 //ErrorMessage = "";
                 /* _loginCredentialsViewModel.ErrorMessage = "";
                  ActivateItem(_preloaderViewModel);

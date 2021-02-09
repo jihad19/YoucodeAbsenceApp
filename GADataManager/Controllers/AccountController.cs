@@ -361,6 +361,7 @@ namespace GADataManager.Controllers
             }
 
             var user = new ApplicationUser() { UserName = model.UserName, Email = model.Email };
+           // var Class = new ApplicationUser() { AccessFailedCount = model.Class,};
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 
@@ -369,8 +370,10 @@ namespace GADataManager.Controllers
                 return GetErrorResult(result);
             }
 
+            int Class = Convert.ToInt32(model.Class);
+
             await UserManager.AddToRoleAsync(user.Id, "Student");
-            AccountModel account = new AccountModel(user.Id, user.Email, user.UserName);
+            AccountModel account = new AccountModel(user.Id, user.Email, user.UserName, Class);
             StudentData(account);
             return Ok();
         }
