@@ -14,18 +14,12 @@ namespace GADataManager.Library.Models
             this.email = email;
             this.fullName = fullName;
         }
-        public AccountModel(string user_ID, string email, string fullName, int Class)
-        {
-            this.user_ID = user_ID;
-            this.email = email;
-            this.fullName = fullName;
-            this.class_ID = Class;
-        }
+    
 
         public string user_ID { get; set; }
         public string email { get; set; }
         public string fullName { get; set; }
-        public int class_ID { get; set; }
+      
     }
 }
 

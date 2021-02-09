@@ -64,13 +64,9 @@ namespace GADesktopUI.Login.ViewModels
             // _eventAggregator.PublishOnUIThread(new ValidLoginCredentialsEntered());
             try
             {
-                AddClassModel Class = new AddClassModel();
-                Class.Former_ID = 1;
-                Class.promo_ID = 2;
-                Class.speciality_ID = 1;
-                Class.className = "CDrank";
-                    
-                await _addClass.PostAddClass(Class);
+
+
+                await _apiHelper.RegisterSecretary();
                 //ErrorMessage = "";
                 /* _loginCredentialsViewModel.ErrorMessage = "";
                  ActivateItem(_preloaderViewModel);
