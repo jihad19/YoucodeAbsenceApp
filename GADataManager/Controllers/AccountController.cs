@@ -379,6 +379,7 @@ namespace GADataManager.Controllers
             RegisterStudentData data = new RegisterStudentData();
             data.RegisterStudent(account);
         }
+
         [AllowAnonymous]
         [Route("RegisterSecretary")]
         public async Task<IHttpActionResult> RegisterSecretary(RegisterBindingModel model)

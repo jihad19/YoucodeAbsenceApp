@@ -63,7 +63,6 @@
     <Folder Include="Publish" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="odb\Stored Procedures\spStudent_GetTodayAbsence.sql" />
     <Build Include="odb\Tables\absence.sql" />
     <Build Include="odb\Tables\Admin.sql" />
     <Build Include="odb\Tables\justification.sql" />
@@ -83,12 +82,17 @@
     <Build Include="odb\Stored Procedures\AdmGetSpeciality.sql" />
     <Build Include="odb\Stored Procedures\AdmGetStudentByClass.sql" />
     <Build Include="odb\Stored Procedures\spFormerRegister.sql" />
-    <Build Include="odb\Stored Procedures\spRequest_GetLatestRequests.sql" />
     <Build Include="odb\Stored Procedures\spSecretaryRegister.sql" />
     <Build Include="odb\Stored Procedures\spStudentRegister.sql" />
     <Build Include="odb\Stored Procedures\spAdmAddClass.sql" />
+    <Build Include="odb\Tables\reason.sql" />
+    <Build Include="odb\Tables\request.sql" />
+    <Build Include="odb\Stored Procedures\spAllRequests.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="odb\Stored Procedures\AdmGetClass.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="GAData.refactorlog" />
   </ItemGroup>
 </Project>

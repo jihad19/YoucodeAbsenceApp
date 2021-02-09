@@ -84,12 +84,12 @@ namespace GADesktopUI.APIHelpers
                 }
             }
         }
-        public async Task RegisterSecretary()
+        public async Task RegisterSecretary(string email, string username, string password, string ConfirmPassword)
         {
             var data = new FormUrlEncodedContent(new[]
             {
-                new KeyValuePair<string, string>("Email", "Secretary2@gmail.com"),
-                new KeyValuePair<string, string>("UserName", "name"),
+                new KeyValuePair<string, string>("Email", "loubnayat3@youcode.com"),
+                new KeyValuePair<string, string>("UserName", "loubnaaa loubnaaa"),
                 new KeyValuePair<string, string>("Password", "Pwordd_123"),
                 new KeyValuePair<string, string>("ConfirmPassword", "Pwordd_123")
                 });
@@ -103,14 +103,14 @@ namespace GADesktopUI.APIHelpers
 
             };
         }
-        public async Task RegisterFormer( )
+        public async Task RegisterFormer(string email, string username, string password, string ConfirmPassword)
         {
             var data = new FormUrlEncodedContent(new[]
             {
-                new KeyValuePair<string, string>("Email", "Former3@gmail.com"),
-                new KeyValuePair<string, string>("UserName", "Tijani abdelatif"),
-                new KeyValuePair<string, string>("Password", "Pwordd_123"),
-                new KeyValuePair<string, string>("ConfirmPassword", "Pwordd_123")
+                 new KeyValuePair<string, string>("Email", email),
+                new KeyValuePair<string, string>("UserName", username),
+                new KeyValuePair<string, string>("Password", password),
+                new KeyValuePair<string, string>("ConfirmPassword", "ConfirmPassword")
                 });
             using (HttpResponseMessage response = await _apiClient.PostAsync("api/account/registerFormer", data))
             {
@@ -121,14 +121,14 @@ namespace GADesktopUI.APIHelpers
 
             };
         }
-        public async Task RegisterStudent()
+        public async Task RegisterStudent(string email,string username,string password,string ConfirmPassword)
         {
             var data = new FormUrlEncodedContent(new[]
             {
-                new KeyValuePair<string, string>("Email", "Student2@gmail.com"),
-                new KeyValuePair<string, string>("UserName", "mikassa abdo"),
-                new KeyValuePair<string, string>("Password", "Pwordd_123"),
-                new KeyValuePair<string, string>("ConfirmPassword", "Pwordd_123")
+                new KeyValuePair<string, string>("Email", email),
+                new KeyValuePair<string, string>("UserName", username),
+                new KeyValuePair<string, string>("Password", password),
+                new KeyValuePair<string, string>("ConfirmPassword", "ConfirmPassword")
                 });
             using (HttpResponseMessage response = await _apiClient.PostAsync("api/account/registerStudent", data))
             {

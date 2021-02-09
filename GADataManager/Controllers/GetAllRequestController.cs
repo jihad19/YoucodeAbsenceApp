@@ -9,17 +9,12 @@ using System.Web.Http;
 
 namespace GADataManager.Controllers
 {
-    
-    public class AdmAddClassController : ApiController
+    public class GetAllRequestController : ApiController
     {
-       
-     
-        public void Post(AdmAddClassModel Class)
+        public List<AllRequestsModel> Get()
         {
-            AdmAddClassData data = new AdmAddClassData();
-            
-
-            data.CreateClass(Class);
+            GetAllRequestsData data = new GetAllRequestsData();
+            return data.Get();
         }
     }
 }

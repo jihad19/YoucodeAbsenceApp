@@ -38,8 +38,7 @@ namespace GADataManager.Models
         [Display(Name = "Email")]
         public string Email { get; set; }
         
-        [Display(Name = "Class")]
-        public int Class { get; set; }
+       
         [Required]
         [Display(Name = "UserName")]
         public string UserName { get; set; }
