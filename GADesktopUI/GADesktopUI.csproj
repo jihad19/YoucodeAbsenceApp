@@ -235,9 +235,9 @@
     <Resource Include="images\icon\searchbtn.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\faces\2e80bb98931623.5ee79b6a8f342.jpg" />
+    <Resource Include="images\faces\lpi.jpg" />
     <Resource Include="images\faces\arm.jpg" />
-    <Resource Include="images\faces\baa20698931623.5ee79b6a8ec2b.jpg" />
+    <Resource Include="images\faces\macrol.jpg" />
     <Resource Include="images\faces\ff.jpg" />
     <Resource Include="images\faces\gls.jpg" />
     <Resource Include="images\faces\hji.jpg" />
@@ -250,6 +250,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\icon\bell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\DemoDataAbsence.csproj">
+      <Project>{6d7a3dd4-fb64-437f-a843-11b68c0d16b6}</Project>
+      <Name>DemoDataAbsence</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Group5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

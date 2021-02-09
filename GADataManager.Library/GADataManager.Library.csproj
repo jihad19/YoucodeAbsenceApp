@@ -53,5 +53,11 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\DemoDataAbsence.csproj">
+      <Project>{6d7a3dd4-fb64-437f-a843-11b68c0d16b6}</Project>
+      <Name>DemoDataAbsence</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -112,10 +112,10 @@
                 </Viewbox>-->
                 
                 <Ellipse x:Name="UserPhoto" HorizontalAlignment="Left" Height="42" StrokeThickness="0" VerticalAlignment="Top" Width="42" Margin="0,-6,12,0">
-                <Ellipse.Fill>
-                    <ImageBrush ImageSource="/GADesktopUI;component/images/faces/lm.jpg"/>
-                </Ellipse.Fill>
-            </Ellipse>
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="/GADesktopUI;component/images/faces/lm.jpg"/>
+                    </Ellipse.Fill>
+                </Ellipse>
 
             <TextBlock Text="Med Mouiguina" FontSize="20" FontFamily="{StaticResource CeraMedium}"/>
             <!--User icon-->
