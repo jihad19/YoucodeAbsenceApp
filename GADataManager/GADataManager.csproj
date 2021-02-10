@@ -218,6 +218,7 @@
 
     <Compile Include="Controllers\FrmGetStudentController.cs" />
     <Compile Include="Controllers\AdmAddClassController.cs" />
+    <Compile Include="Controllers\AdmDeleteUserController.cs" />
     <Compile Include="Controllers\AdmGetFormerController.cs" />
     <Compile Include="Controllers\AdmGetPromoController.cs" />
     <Compile Include="Controllers\AdmGetSpecialityController.cs" />
@@ -225,8 +226,12 @@
     <Compile Include="Controllers\AdmGetClassesController.cs" />
     <Compile Include="Controllers\GetAllRequestController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\StudentAbsenceSingleController.cs" />
+
+    
     <Compile Include="Controllers\StudentRequestController.cs" />
+
+    <Compile Include="Controllers\UpdateUserController.cs" />
+
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
