@@ -215,6 +215,7 @@
     <Compile Include="Controllers\AdmGetClassesController.cs" />
     <Compile Include="Controllers\GetAllRequestController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UpdateUserController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

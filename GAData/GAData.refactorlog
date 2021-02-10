@@ -280,4 +280,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="abs_ID" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="b82cc7dd-a77b-47a9-8533-aad774188927" ChangeDateTime="02/10/2021 00:21:57">
+    <Property Name="ElementName" Value="[dbo].[User].[status]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[User]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="statu" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="afd36398-8f4f-4c03-a8b1-963710a51abd" ChangeDateTime="02/10/2021 00:27:03">
+    <Property Name="ElementName" Value="[dbo].[User].[statu]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[User]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="status" />
+  </Operation>
 </Operations>

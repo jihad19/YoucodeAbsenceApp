@@ -6,5 +6,6 @@ namespace GADesktopUI.APIHelpers
     public interface IAddClassEndpoint
     {
         Task PostAddClass(AddClassModel Class);
+        Task UpdateUser(UpdateUserModel user);
     }
 }

@@ -64,9 +64,10 @@ namespace GADesktopUI.Login.ViewModels
             // _eventAggregator.PublishOnUIThread(new ValidLoginCredentialsEntered());
             try
             {
-
-
-                await _apiHelper.RegisterStudent("TestStudentClass@gmail","Class class","Pwd_123", "Pwd_123","1");
+                UpdateUserModel user = new UpdateUserModel("Update@gmail.com", "update update4", 0, "fa7f7264-197d-4e2c-8593-ca4552f3a7ff");
+               
+                await _addClass.UpdateUser(user);
+                //await _apiHelper.RegisterStudent("TestStudentClass@gmail","Class class","Pwd_123", "Pwd_123","1");
                 //ErrorMessage = "";
                 /* _loginCredentialsViewModel.ErrorMessage = "";
                  ActivateItem(_preloaderViewModel);
