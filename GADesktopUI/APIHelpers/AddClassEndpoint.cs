@@ -30,7 +30,7 @@ namespace GADesktopUI.APIHelpers
         }
         public async Task UpdateUser(UpdateUserModel user)
         {
-            using (HttpResponseMessage response = await _apiHelper.ApiClient.PostAsJsonAsync("/api/UpdateUser", user))
+            using (HttpResponseMessage response = await _apiHelper.ApiClient.PostAsJsonAsync("/api/AdmUpdateUser", user))
             {
                 if (!response.IsSuccessStatusCode)
                 {
@@ -39,5 +39,6 @@ namespace GADesktopUI.APIHelpers
 
             }
         }
+        
     }
 }

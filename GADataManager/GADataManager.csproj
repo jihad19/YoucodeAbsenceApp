@@ -208,6 +208,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdmAddClassController.cs" />
+    <Compile Include="Controllers\AdmDeleteUserController.cs" />
     <Compile Include="Controllers\AdmGetFormerController.cs" />
     <Compile Include="Controllers\AdmGetPromoController.cs" />
     <Compile Include="Controllers\AdmGetSpecialityController.cs" />

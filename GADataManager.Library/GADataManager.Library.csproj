@@ -52,6 +52,7 @@
     <Compile Include="DataAccess\AdmGetStudentByClassData.cs" />
     <Compile Include="DataAccess\AdmGetClassesData.cs" />
     <Compile Include="DataAccess\AdmUpdateUserData.cs" />
+    <Compile Include="DataAccess\ADMDeleteUserData.cs" />
     <Compile Include="DataAccess\GetAllRequestsData.cs" />
     <Compile Include="DataAccess\RegisterFormerData.cs" />
     <Compile Include="DataAccess\RegisterSecretaryData.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Models\AdmGetClassesModel.cs" />
     <Compile Include="Models\AdmUpdateUserModel.cs" />
     <Compile Include="Models\AllRequestsModel.cs" />
+    <Compile Include="Models\AdmDeleteUserModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -9,14 +9,14 @@ using System.Web.Http;
 
 namespace GADataManager.Controllers
 {
-    public class ADMUpdateUserController : ApiController
+    public class AdmDeleteUserController : ApiController
     {
-        public void Post(AdmUpdateUserModel user)
+        public void Post(AdmDeleteUserModel user)
         {
-            AdmUpdateUserData data = new AdmUpdateUserData();
+            ADMDeleteUserData data = new ADMDeleteUserData();
 
 
-            data.UpdateUser(user);
+            data.DeleteUser(user);
         }
     }
 }
