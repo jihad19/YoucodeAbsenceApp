@@ -7,6 +7,7 @@
              xmlns:local="clr-namespace:GADesktopUI.Content.Views"
              mc:Ignorable="d" 
              d:DesignHeight="772" d:DesignWidth="1136" >
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto" MinWidth="656"/>
@@ -36,24 +37,6 @@
                 <Border.Effect>
                     <DropShadowEffect Direction="311" RenderingBias="Quality" ShadowDepth="12" Color="#FF2B2828" Opacity="0.06" BlurRadius="100"/>
                 </Border.Effect>
-                <!--<StackPanel Orientation="Horizontal" Margin="24,57,123,134">
-                    <Ellipse x:Name="StudentPhoto" HorizontalAlignment="Left" Height="42" StrokeThickness="0" VerticalAlignment="Top" Width="42" >
-                        <Ellipse.Fill>
-                            <ImageBrush ImageSource="/GADesktopUI;component/images/faces/lm.jpg" Stretch="UniformToFill"/>
-                        </Ellipse.Fill>
-                    </Ellipse>
-                    <StackPanel Margin="9,0,0,0"  >
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Ayoub Essafi" FontFamily="{StaticResource CeraBold}" FontSize="18" Foreground="#FF273240"></TextBlock>
-                            <TextBlock Text="01 / 02 / 2021" FontFamily="{StaticResource CeraLight}" Foreground="#FF34A7F7" Padding="9,0,0,0" VerticalAlignment="Center" Margin="4,0,0,0" FontSize="14"/>
-
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Sick leave" FontFamily="{StaticResource CeraLight}" Foreground="#FF8793AC" FontSize="14" />
-                            <hc:Tag Margin="15,4,5,5" ShowCloseButton="False" Content="Approved" Height="15" FontSize="10" Width="78" Padding="0,0,0,0" Background="#FF65DFC9" Foreground="White" FontFamily="{StaticResource CeraLight}" />
-                        </StackPanel>
-                    </StackPanel>
-                </StackPanel>-->
             </Border>
             <ItemsControl x:Name="Students">
                 <ItemsControl.ItemsPanel>
@@ -88,14 +71,40 @@
             </ItemsControl>
             <StackPanel x:Name="RequestsHeader" VerticalAlignment="Top" Orientation="Horizontal"  Height="59">
                 <TextBlock Text="Recent Requests" FontFamily="{StaticResource CeraBold}" FontSize="19" Padding="22,13,0,0" Foreground="#FF273240"  ></TextBlock>
-                <TextBlock FontFamily="{StaticResource CeraBold}" FontSize="30" Padding="0" Width="46.82" Margin="150,-10,0,18.145" RenderTransformOrigin="2.198,0.327" Foreground="#FFC4C4C4" VerticalAlignment="Center" Height="30.855"  ><Run Text="."/><Run Text=" "/><Run Text="."/><Run Text=" "/><Run Text="."/></TextBlock>
-
+                <TextBlock FontFamily="{StaticResource CeraBold}" FontSize="30" Padding="0" Width="46.82" Margin="150,-10,0,18.145" RenderTransformOrigin="2.198,0.327" Foreground="#FFC4C4C4" VerticalAlignment="Center" Height="30.855"  Text="..." FrameworkElement.FlowDirection="RightToLeft"  />
             </StackPanel>
+            <!--Classes List-->
             <Border x:Name="ClassesDash" BorderBrush="Black" Grid.Row="2"   HorizontalAlignment="Left" Height="156"  Background="White" VerticalAlignment="Top" Width="413" CornerRadius="30" >
                 <Border.Effect>
                     <DropShadowEffect Direction="311" RenderingBias="Quality" ShadowDepth="12" Color="#FF2B2828" Opacity="0.06" BlurRadius="100"/>
                 </Border.Effect>
             </Border>
+            <DockPanel Grid.Row="2" Height="50" VerticalAlignment="Top" Margin="0,2,0,0">
+                <TextBlock Text="Youcode Classes" FontFamily="{StaticResource CeraBold}" FontSize="19" Padding="24,10,0,0"  ></TextBlock>
+                <TextBlock FontFamily="{StaticResource CeraBold}" FontSize="30" Padding="0" Width="25.487" Margin="160,-5.334,0,18" RenderTransformOrigin="0.469,0.632" Foreground="#FFC4C4C4" VerticalAlignment="Center" Height="31.939"  Text="..." TextAlignment="Right"  />
+            </DockPanel>
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Height="68" VerticalAlignment="Center" Margin="0,13,0,0">
+                <StackPanel Height="50" Margin="24,0,0,0">
+                    <Ellipse Fill="#FFF8B5C8" HorizontalAlignment="Left" Height="50" Width="50"/>
+                    <TextBlock Text="JEE" Foreground="White" FontSize="16" FontFamily="{StaticResource ResourceKey=CeraBold}"  Width="28.668" Margin="0,-49,0,0" Height="23.667" />
+                </StackPanel>
+                <StackPanel Height="50" Margin="20,0,0,0">
+                    <Ellipse Fill="#98A2FD" HorizontalAlignment="Left" Height="50" Width="50"/>
+                    <TextBlock Text="C#" Foreground="White" FontSize="16" FontFamily="{StaticResource ResourceKey=CeraBold}"  Width="23.335" Margin="0,-49,0,0" Height="23.668" />
+                </StackPanel>
+                <StackPanel Height="50" Margin="20,0,0,0">
+                    <Ellipse Fill="#45C0A4" HorizontalAlignment="Left" Height="50" Width="50"/>
+                    <TextBlock Text="FB" Foreground="White" FontSize="16" FontFamily="{StaticResource ResourceKey=CeraBold}"  Width="21.335" Margin="0,-49,0,0" Height="23.668" />
+                </StackPanel>
+                <StackPanel Height="50" Margin="20,0,0,0">
+                    <Ellipse Fill="#FD8F79" HorizontalAlignment="Left" Height="50" Width="50"/>
+                    <TextBlock Text="C1" Foreground="White" FontSize="16" FontFamily="{StaticResource ResourceKey=CeraBold}"  Width="19.335" Margin="0,-49,0,0" Height="23.668" />
+                </StackPanel>
+                <StackPanel Height="50" Margin="20,0,0,0">
+                    <Ellipse Fill="#F8E6EE" HorizontalAlignment="Left" Height="50" Width="50"/>
+                    <TextBlock Text="3+" Foreground="#FFE92E63" FontFamily="{StaticResource ResourceKey=CeraBold}"  Width="14.002" Margin="0,-49,0,0" Height="17.001" />
+                </StackPanel>
+            </StackPanel>
         </Grid>
         <!--Dashboard Teachers-->
         <Border x:Name="TeachersDash" Grid.Row="2" BorderBrush="#FF272727" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="274" VerticalAlignment="Top" Width="1136" Background="White" CornerRadius="30">
@@ -104,8 +113,8 @@
             </Border.Effect>
         </Border>
         <DockPanel x:Name="ClassesHeader" Grid.Row="2" Grid.ColumnSpan="3" VerticalAlignment="Top"   Height="59">
-            <TextBlock Text="Recent Requests" DockPanel.Dock="Left" FontFamily="{StaticResource CeraBold}" FontSize="19" Padding="22,13,0,0" Foreground="#FF273240"  ></TextBlock>
-            <TextBlock Text="View All" FontFamily="{StaticResource CeraLight}" DockPanel.Dock="Right" FontSize="20" Padding="0" Foreground="#FF34A7F7" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,26,0"  />
+            <TextBlock Text="Formateurs référent" DockPanel.Dock="Left" FontFamily="{StaticResource CeraBold}" FontSize="19" Padding="22,13,0,0" Foreground="#FF273240"  ></TextBlock>
+            <TextBlock Text="View All" FontFamily="{StaticResource CeraLight}" DockPanel.Dock="Right" Padding="0" Foreground="#FF34A7F7" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,26,0" FontSize="14"  />
             <Button Style="{StaticResource ButtonDashedPrimary}" Content="+ Add Teacher" DockPanel.Dock="Right" Background="#FFE5EEFF" Margin="0,0,19,0" HorizontalAlignment="Right"></Button>
         </DockPanel>
         <Grid Grid.Row="2" Grid.ColumnSpan="3" Height="416.753" VerticalAlignment="Bottom" >
@@ -150,7 +159,7 @@
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <Border >
-                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical" Margin="15,0,0,0" >
+                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical" Margin="18,0,0,0" >
                             <Rectangle Width="64" Height="62" RadiusX="20" RadiusY="20">
                                 <Rectangle.Fill>
                                     <ImageBrush ImageSource="{Binding PicPath}" Stretch="UniformToFill"/>
