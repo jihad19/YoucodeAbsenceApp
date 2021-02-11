@@ -16,6 +16,8 @@ using Microsoft.Owin.Security.OAuth;
 using GADataManager.Models;
 using GADataManager.Providers;
 using GADataManager.Results;
+using GADataManager.Library.Models;
+using GADataManager.Library.DataAccess;
 
 namespace GADataManager.Controllers
 {
@@ -25,14 +27,15 @@ namespace GADataManager.Controllers
     {
         private const string LocalLoginProvider = "Local";
         private ApplicationUserManager _userManager;
-
+        private readonly RoleManager<IdentityRole> roleManager;
         public AccountController()
         {
         }
 
         public AccountController(ApplicationUserManager userManager,
-            ISecureDataFormat<AuthenticationTicket> accessTokenFormat)
+            ISecureDataFormat<AuthenticationTicket> accessTokenFormat, RoleManager<IdentityRole> roleManager)
         {
+            this.roleManager = roleManager;
             UserManager = userManager;
             AccessTokenFormat = accessTokenFormat;
         }
@@ -320,15 +323,15 @@ namespace GADataManager.Controllers
 
         // POST api/Account/Register
         [AllowAnonymous]
-        [Route("Register")]
-        public async Task<IHttpActionResult> Register(RegisterBindingModel model)
+        [Route("RegisterFormer")]
+        public async Task<IHttpActionResult> RegisterFormer(RegisterBindingModel model)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
+            var user = new ApplicationUser() { UserName = model.UserName, Email = model.Email,};
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 
@@ -337,7 +340,77 @@ namespace GADataManager.Controllers
                 return GetErrorResult(result);
             }
 
+            await UserManager.AddToRoleAsync(user.Id, "Former");
+            AccountModel account = new AccountModel(user.Id, user.Email, user.UserName);
+            formerData(account);
             return Ok();
+        }
+        public void formerData(AccountModel account)
+        {
+            RegisterFormerData data = new RegisterFormerData();
+            data.RegisterFormer(account);
+        }
+
+        [AllowAnonymous]
+        [Route("RegisterStudent")]
+        public async Task<IHttpActionResult> RegisterStudent(RegisterBindingModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var user = new ApplicationUser() { UserName = model.UserName, Email = model.Email };
+           // var Class = new ApplicationUser() { AccessFailedCount = model.Class,};
+
+            IdentityResult result = await UserManager.CreateAsync(user, model.Password);
+
+            if (!result.Succeeded)
+            {
+                return GetErrorResult(result);
+            }
+
+            int Class = Convert.ToInt32(model.Class);
+
+            await UserManager.AddToRoleAsync(user.Id, "Student");
+            AccountModel account = new AccountModel(user.Id, user.Email, user.UserName, Class);
+            StudentData(account);
+            return Ok();
+        }
+        public void StudentData(AccountModel account)
+        {
+            RegisterStudentData data = new RegisterStudentData();
+            data.RegisterStudent(account);
+        }
+
+        [AllowAnonymous]
+        [Route("RegisterSecretary")]
+        public async Task<IHttpActionResult> RegisterSecretary(RegisterBindingModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var user = new ApplicationUser() { UserName = model.UserName, Email = model.Email };
+
+            IdentityResult result = await UserManager.CreateAsync(user, model.Password);
+
+            if (!result.Succeeded)
+            {
+                return GetErrorResult(result);
+            }
+
+            await UserManager.AddToRoleAsync(user.Id, "Secretary");
+            AccountModel account = new AccountModel(user.Id, user.Email,user.UserName);
+            SecretaryData(account);
+            return Ok();
+        }
+
+        public void SecretaryData(AccountModel account)
+        {
+            RegisterSecretaryData data = new RegisterSecretaryData();
+            data.RegisterSecretary(account);
         }
 
         // POST api/Account/RegisterExternal
@@ -350,7 +423,7 @@ namespace GADataManager.Controllers
             {
                 return BadRequest(ModelState);
             }
-
+            
             var info = await Authentication.GetExternalLoginInfoAsync();
             if (info == null)
             {

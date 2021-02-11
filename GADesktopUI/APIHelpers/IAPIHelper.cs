@@ -10,5 +10,8 @@ namespace GADesktopUI.APIHelpers
 
         Task<AuthenticatedUser> Authenticate(string username, string password);
         Task GetLoggedInUserInfo(string token);
+        Task RegisterSecretary(string email, string username, string password, string ConfirmPassword);
+        Task RegisterFormer(string email, string username, string password, string ConfirmPassword);
+        Task RegisterStudent(string email, string username, string password, string ConfirmPassword,string class_id);
     }
 }

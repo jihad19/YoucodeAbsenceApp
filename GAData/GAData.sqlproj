@@ -56,5 +56,43 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="odb" />
+    <Folder Include="odb\Stored Procedures" />
+    <Folder Include="odb\Tables" />
+    <Folder Include="odb\Views" />
+    <Folder Include="Publish" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="odb\Tables\absence.sql" />
+    <Build Include="odb\Tables\Admin.sql" />
+    <Build Include="odb\Tables\justification.sql" />
+    <Build Include="odb\Tables\suAdmin.sql" />
+    <Build Include="odb\Tables\User.sql" />
+    <Build Include="odb\Tables\class.sql" />
+    <Build Include="odb\Tables\delay.sql" />
+    <Build Include="odb\Tables\former.sql" />
+    <Build Include="odb\Tables\promo.sql" />
+    <Build Include="odb\Tables\secretary.sql" />
+    <Build Include="odb\Tables\specialty.sql" />
+    <Build Include="odb\Tables\student.sql" />
+
+
+    <Build Include="odb\Stored Procedures\AdmGetFormer.sql" />
+    <Build Include="odb\Stored Procedures\AdmGetPromo.sql" />
+    <Build Include="odb\Stored Procedures\AdmGetSpeciality.sql" />
+    <Build Include="odb\Stored Procedures\AdmGetStudentByClass.sql" />
+    <Build Include="odb\Stored Procedures\spFormerRegister.sql" />
+    <Build Include="odb\Stored Procedures\spSecretaryRegister.sql" />
+    <Build Include="odb\Stored Procedures\spStudentRegister.sql" />
+    <Build Include="odb\Stored Procedures\spAdmAddClass.sql" />
+    <Build Include="odb\Tables\reason.sql" />
+    <Build Include="odb\Tables\request.sql" />
+    <Build Include="odb\Stored Procedures\spAllRequests.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="odb\Stored Procedures\AdmGetClass.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="GAData.refactorlog" />
   </ItemGroup>
 </Project>
