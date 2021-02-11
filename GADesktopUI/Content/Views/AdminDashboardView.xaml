@@ -25,6 +25,8 @@
                 <DropShadowEffect Direction="311" RenderingBias="Quality" ShadowDepth="12" Color="#FF2B2828" Opacity="0.06" BlurRadius="100"/>
             </Border.Effect>
         </Border>
+        <Image Source="/images/Group6.png" RenderOptions.BitmapScalingMode="HighQuality" Margin="31.5,-65.5,0,17.5" Width="562" HorizontalAlignment="Left" Grid.RowSpan="2" />
+
         <!--Dashboard right bars-->
         <Grid Grid.Column="2" >
             <Grid.RowDefinitions>
@@ -159,7 +161,7 @@
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <Border >
-                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical" Margin="18,0,0,0" >
+                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical" Margin="15,0,0,0" >
                             <Rectangle Width="64" Height="62" RadiusX="20" RadiusY="20">
                                 <Rectangle.Fill>
                                     <ImageBrush ImageSource="{Binding PicPath}" Stretch="UniformToFill"/>
