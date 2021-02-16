@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ED10A7D0-1C4B-4E87-8BBF-4C6EF3CF9BBE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GADataManager.Library</RootNamespace>
+    <AssemblyName>GADataManager.Library</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.78\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess\FrmGetStudentsData.cs" />
+    <Compile Include="DataAccess\UserData.cs" />
+    <Compile Include="Internal\DataAccess\SqlDataAccess.cs" />
+    <Compile Include="Models\FrmGetStudentsModel.cs" />
+    <Compile Include="DataAccess\AdmAddClassData.cs" />
+    <Compile Include="DataAccess\AdmGetFormerData.cs" />
+    <Compile Include="DataAccess\AdmGetPromoData.cs" />
+    <Compile Include="DataAccess\AdmGetSpecialityData.cs" />
+    <Compile Include="DataAccess\AdmGetStudentByClassData.cs" />
+    <Compile Include="DataAccess\AdmGetClassesData.cs" />
+    <Compile Include="DataAccess\AdmUpdateUserData.cs" />
+    <Compile Include="DataAccess\ADMDeleteUserData.cs" />
+    <Compile Include="DataAccess\GetAllRequestsData.cs" />
+    <Compile Include="DataAccess\RegisterFormerData.cs" />
+    <Compile Include="DataAccess\RegisterSecretaryData.cs" />
+    <Compile Include="DataAccess\RegisterStudentData.cs" />
+    <Compile Include="DataAccess\UserData.cs" />
+    <Compile Include="Internal\DataAccess\SqlDataAccess.cs" />
+    <Compile Include="Models\AccountModel.cs" />
+    <Compile Include="Models\AdmAddClassModel.cs" />
+    <Compile Include="Models\AdmGetFormerModel.cs" />
+    <Compile Include="Models\AdmGetPromoModel.cs" />
+    <Compile Include="Models\AdmGetSpecialityModel.cs" />
+    <Compile Include="Models\AdmGetStudentByClassModel.cs" />
+    <Compile Include="Models\AdmGetClassesModel.cs" />
+    <Compile Include="Models\AdmUpdateUserModel.cs" />
+    <Compile Include="Models\AllRequestsModel.cs" />
+    <Compile Include="Models\AdmDeleteUserModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\DemoDataAbsence.csproj">
+      <Project>{6d7a3dd4-fb64-437f-a843-11b68c0d16b6}</Project>
+      <Name>DemoDataAbsence</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>GAData</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{fc082ee0-2dce-4793-a5ae-5fc9fffd9454}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>GAData</RootNamespace>
+    <AssemblyName>GAData</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="odb" />
+    <Folder Include="odb\Stored Procedures" />
+    <Folder Include="odb\Tables" />
+    <Folder Include="odb\Views" />
+    <Folder Include="Publish" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="odb\Tables\absence.sql" />
+    <Build Include="odb\Tables\Admin.sql" />
+    <Build Include="odb\Tables\justification.sql" />
+    <Build Include="odb\Tables\suAdmin.sql" />
+    <Build Include="odb\Tables\User.sql" />
+    <Build Include="odb\Tables\class.sql" />
+    <Build Include="odb\Tables\delay.sql" />
+    <Build Include="odb\Tables\former.sql" />
+    <Build Include="odb\Tables\promo.sql" />
+    <Build Include="odb\Tables\secretary.sql" />
+    <Build Include="odb\Tables\specialty.sql" />
+    <Build Include="odb\Tables\student.sql" />
+
+
+    <Build Include="odb\Stored Procedures\AdmGetFormer.sql" />
+    <Build Include="odb\Stored Procedures\AdmGetPromo.sql" />
+    <Build Include="odb\Stored Procedures\AdmGetSpeciality.sql" />
+    <Build Include="odb\Stored Procedures\AdmGetStudentByClass.sql" />
+    <Build Include="odb\Stored Procedures\spFormerRegister.sql" />
+    <Build Include="odb\Stored Procedures\spSecretaryRegister.sql" />
+    <Build Include="odb\Stored Procedures\spStudentRegister.sql" />
+    <Build Include="odb\Stored Procedures\spAdmAddClass.sql" />
+    <Build Include="odb\Tables\reason.sql" />
+    <Build Include="odb\Tables\request.sql" />
+    <Build Include="odb\Stored Procedures\spAllRequests.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="odb\Stored Procedures\AdmGetClass.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="GAData.refactorlog" />
+  </ItemGroup>
+</Project>

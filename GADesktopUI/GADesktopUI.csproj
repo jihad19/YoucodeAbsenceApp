@@ -35,8 +35,30 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Caliburn.Micro, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.Core.3.2.0\lib\net45\Caliburn.Micro.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.3.2.0\lib\net45\Caliburn.Micro.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.3.2.0\lib\net45\Caliburn.Micro.Platform.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="HandyControl, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HandyControl.3.0.0\lib\net47\HandyControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.3.2.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,18 +77,102 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
+    <Compile Include="APIHelpers\AddClassEndpoint.cs" />
+    <Compile Include="APIHelpers\APIHelper.cs" />
+    <Compile Include="APIHelpers\IAddClassEndpoint.cs" />
+    <Compile Include="APIHelpers\IAPIHelper.cs" />
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Content\ViewModels\AdminDashboardViewModel.cs" />
+    <Compile Include="Content\ViewModels\ContentConductorViewModel.cs" />
+    <Compile Include="Content\ViewModels\HeaderViewModel.cs" />
+    <Compile Include="Content\ViewModels\MenuViewModel.cs" />
+    <Compile Include="Content\Views\AdminDashboardView.xaml.cs">
+      <DependentUpon>AdminDashboardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Views\ContentConductorView.xaml.cs">
+      <DependentUpon>ContentConductorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Views\HeaderView.xaml.cs">
+      <DependentUpon>HeaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Views\MenuView.xaml.cs">
+      <DependentUpon>MenuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login\EventMessages\AttemptLogin.cs" />
+    <Compile Include="Login\EventMessages\ValidLoginCredentialsEntered.cs" />
+    <Compile Include="Login\ViewModels\LoginConductorViewModel.cs" />
+    <Compile Include="Login\ViewModels\LoginCredentialsViewModel.cs" />
+    <Compile Include="Login\ViewModels\LoginSideBarViewModel.cs" />
+    <Compile Include="Login\ViewModels\PreloaderViewModel.cs" />
+    <Compile Include="Login\Views\LoginConductorView.xaml.cs">
+      <DependentUpon>LoginConductorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Views\LoginCredentialsView.xaml.cs">
+      <DependentUpon>LoginCredentialsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Views\LoginSideBarView.xaml.cs">
+      <DependentUpon>LoginSideBarView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Views\PreloaderView.xaml.cs">
+      <DependentUpon>PreloaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AddClassModel.cs" />
+    <Compile Include="Models\AuthenticatedUser.cs" />
+    <Compile Include="Models\ILoggedInUserModel.cs" />
+    <Compile Include="Models\LoggedInUserModel.cs" />
+    <Compile Include="Models\UpdateUserModel.cs" />
+    <Compile Include="ShellView.xaml.cs">
+      <DependentUpon>ShellView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShellViewModel.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Page Include="Content\Views\AdminDashboardView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Content\Views\ContentConductorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Content\Views\HeaderView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Content\Views\MenuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login\Views\LoginConductorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login\Views\LoginCredentialsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login\Views\LoginSideBarView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login\Views\PreloaderView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShellView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Fonts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\icons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -86,6 +192,27 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="fonts\CERA PRO BLACK ITALIC.OTF" />
+    <Resource Include="fonts\CERA PRO BLACK.OTF" />
+    <Resource Include="fonts\CERA PRO BOLD.OTF" />
+    <Resource Include="fonts\CERA PRO LIGHT.OTF" />
+    <Resource Include="fonts\CERA PRO MEDIUM.OTF" />
+    <Resource Include="fonts\CERA PRO REGULAR ITALIC.OTF" />
+    <Resource Include="fonts\CERA PRO REGULAR.OTF" />
+    <Resource Include="fonts\CERA PRO THIN.OTF" />
+    <Resource Include="fonts\password.ttf" />
+    <Resource Include="fonts\POPPINS-BOLD.OTF" />
+    <Resource Include="fonts\POPPINS-EXTRABOLD.OTF" />
+    <Resource Include="fonts\POPPINS-LIGHT.OTF" />
+    <Resource Include="fonts\POPPINS-LIGHTITALIC.TTF" />
+    <Resource Include="fonts\POPPINS-MEDIUM.TTF" />
+    <Resource Include="fonts\POPPINS-MEDIUMITALIC.TTF" />
+    <Resource Include="fonts\POPPINS-REGULAR.TTF" />
+    <Resource Include="fonts\POPPINS-SEMIBOLD.TTF" />
+    <Resource Include="fonts\POPPINS-SEMIBOLDITALIC.TTF" />
+    <Resource Include="fonts\POPPINS-THIN.TTF" />
+    <None Include="Design\projectGuides.guides" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,6 +220,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\EventMessages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\langCloudAnime.png" />
+    <Resource Include="images\langCloudAnimeCp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\padlock.png" />
+    <Resource Include="images\icon\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
